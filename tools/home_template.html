@@ -35,6 +35,7 @@
         <a href="#clubs">{{navClubs}}</a>
         <a href="#coaches">{{navCoaches}}</a>
         <a href="#team">{{navTeam}}</a>
+        <a href="/demo/">{{navDemo}}</a>
         <a href="#contact">{{navContacts}}</a>
       </nav>
       <div class="lang-switcher" aria-label="Language">
@@ -302,13 +303,11 @@
           <p class="eyebrow"><b>10</b> {{roadEyebrow}}</p>
           <h2 class="display h2">{{roadTitle}}</h2>
         </div>
-        <ol class="road">
-          <li class="done" data-reveal><time>03.09.26</time><p>{{road1}}</p></li>
-          <li class="done" data-reveal><time>{{road2d}}</time><p>{{road2}}</p></li>
-          <li class="now" data-reveal><time>{{road3d}}</time><p>{{road3}}</p><span>{{roadNow}}</span></li>
-          <li data-reveal><time>Q4 2026</time><p>{{road4}}</p></li>
-          <li data-reveal><time>2027</time><p>{{road5}}</p></li>
-          <li data-reveal><time>2028</time><p>{{road6}}</p></li>
+        <ol class="road road--stages">
+          <li class="done" data-reveal><b>Idea</b><time>{{st1d}}</time><p>{{st1}}</p></li>
+          <li class="done" data-reveal><b>Prototype</b><time>{{st2d}}</time><p>{{st2}}</p></li>
+          <li class="now" data-reveal><b>MVP</b><time>{{st3d}}</time><p>{{st3}}</p><span>{{roadNow}}</span></li>
+          <li data-reveal><b>Launched</b><time>Q4 2026</time><p>{{st4}}</p></li>
         </ol>
         <article class="partner" data-reveal>
           <div class="partner-logo"><img src="/assets/itek-logo.jpg" width="450" height="300" loading="lazy" alt="Itek Tennis Club"></div>
@@ -321,19 +320,69 @@
       </div>
     </section>
 
+    <!-- Implementation plan -->
+    <section class="section section--deep" id="plan">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>11</b> {{planEyebrow}}</p>
+          <h2 class="display h2">{{planTitle}}</h2>
+          <p class="lead">{{planLead}}</p>
+        </div>
+        <div class="plan-stages">
+          <article class="club-card" data-reveal><span class="tag">{{p1d}}</span><h3>{{p1}}</h3><p>{{p1p}}</p></article>
+          <article class="club-card" data-reveal><span class="tag">{{p2d}}</span><h3>{{p2}}</h3><p>{{p2p}}</p></article>
+          <article class="club-card" data-reveal><span class="tag">{{p3d}}</span><h3>{{p3}}</h3><p>{{p3p}}</p></article>
+        </div>
+        <div class="plan-cols">
+          <div data-reveal>
+            <p class="eyebrow eyebrow--lavender">{{techTitle}}</p>
+            <ul class="tech-list">
+              <li>{{tech1}}</li><li>{{tech2}}</li><li>{{tech3}}</li><li>{{tech4}}</li><li>{{tech5}}</li><li>{{tech6}}</li><li>{{tech7}}</li>
+            </ul>
+          </div>
+          <div data-reveal>
+            <p class="eyebrow eyebrow--lavender">{{aiTitle}}</p>
+            <div class="ai-grid">
+              <article class="feature"><span class="feature-ix">AI</span><h3>{{ai1}}</h3><p>{{ai1p}}</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>{{ai2}}</h3><p>{{ai2p}}</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>{{ai3}}</h3><p>{{ai3p}}</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>{{ai4}}</h3><p>{{ai4p}}</p></article>
+            </div>
+          </div>
+        </div>
+        <div class="plan-cta" data-reveal><a class="btn btn--lime" href="/demo/">{{planCta}}</a></div>
+      </div>
+    </section>
+
     <!-- Team -->
     <section class="section section--deep" id="team">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>11</b> {{teamEyebrow}}</p>
+          <p class="eyebrow"><b>12</b> {{teamEyebrow}}</p>
           <h2 class="display h2">{{teamTitle}}</h2>
         </div>
         <div class="team">
-          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="{{t1n}}"><small>{{t1r}}</small><h3>{{t1n}}</h3><p>{{t1p}}</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="{{t2n}}"><small>{{t2r}}</small><h3>{{t2n}}</h3><p>{{t2p}}</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="{{t3n}}"><small>{{t3r}}</small><h3>{{t3n}}</h3><p>{{t3p}}</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="{{t4n}}"><small>{{t4r}}</small><h3>{{t4n}}</h3><p>{{t4p}}</p></article>
-          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="{{t5n}}"><small>{{t5r}}</small><h3>{{t5n}}</h3><p>{{t5p}}</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="{{t1n}}"><small>{{t1r}}</small><h3>{{t1n}}</h3><p>{{t1p}}</p><p class="mate-skills">{{t1s}}</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="{{t2n}}"><small>{{t2r}}</small><h3>{{t2n}}</h3><p>{{t2p}}</p><p class="mate-skills">{{t2s}}</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="{{t3n}}"><small>{{t3r}}</small><h3>{{t3n}}</h3><p>{{t3p}}</p><p class="mate-skills">{{t3s}}</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="{{t4n}}"><small>{{t4r}}</small><h3>{{t4n}}</h3><p>{{t4p}}</p><p class="mate-skills">{{t4s}}</p></article>
+          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="{{t5n}}"><small>{{t5r}}</small><h3>{{t5n}}</h3><p>{{t5p}}</p><p class="mate-skills">{{t5s}}</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="section" id="why">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>13</b> {{whyEyebrow}}</p>
+          <h2 class="display h2">{{whyTitle}}</h2>
+        </div>
+        <div class="club-grid">
+          <article class="club-card" data-reveal><h3>{{w1}}</h3><p>{{w1p}}</p></article>
+          <article class="club-card" data-reveal><h3>{{w2}}</h3><p>{{w2p}}</p></article>
+          <article class="club-card" data-reveal><h3>{{w3}}</h3><p>{{w3p}}</p></article>
+          <article class="club-card" data-reveal><h3>{{w4}}</h3><p>{{w4p}}</p></article>
         </div>
       </div>
     </section>

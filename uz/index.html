@@ -35,6 +35,7 @@
         <a href="#clubs">Klublarga</a>
         <a href="#coaches">Murabbiylarga</a>
         <a href="#team">Jamoa</a>
+        <a href="/demo/">Demo</a>
         <a href="#contact">Aloqa</a>
       </nav>
       <div class="lang-switcher" aria-label="Language">
@@ -299,16 +300,14 @@
       <span class="anchor" id="partners"></span>
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>10</b> Hozir qayerdamiz</p>
+          <p class="eyebrow"><b>10</b> Yo‘l xaritasi</p>
           <h2 class="display h2">Mahsulot tayyor —<br>ishga tushiramiz</h2>
         </div>
-        <ol class="road">
-          <li class="done" data-reveal><time>03.09.26</time><p>SQUAD MChJ ro‘yxatdan o‘tdi</p></li>
-          <li class="done" data-reveal><time>Sen 2026</time><p>40 ta ekran, murabbiy kabineti, boshqaruv paneli</p></li>
-          <li class="now" data-reveal><time>Okt 2026</time><p>iOS 1.0.7 TestFlightda, DUNS olindi</p><span>Biz shu yerdamiz</span></li>
-          <li data-reveal><time>Q4 2026</time><p>App Store va Google Play: Toshkentda padel va tennis</p></li>
-          <li data-reveal><time>2027</time><p>Apple Watch, AI-kameralar, futbol, blogerlar</p></li>
-          <li data-reveal><time>2028</time><p>Butun O‘zbekiston va o‘z medialigamiz</p></li>
+        <ol class="road road--stages">
+          <li class="done" data-reveal><b>Idea</b><time>2026</time><p>Toshkent bozorini o‘rganish, biznes-model, o‘yinchilar va klublar bilan suhbatlar</p></li>
+          <li class="done" data-reveal><b>Prototype</b><time>Iyul 2026</time><p>Ilova va boshqaruv panelining interaktiv prototipi, ssenariylar sinovi</p></li>
+          <li class="now" data-reveal><b>MVP</b><time>Sen–Okt 2026</time><p>MCHJ ro‘yxatdan o‘tdi, iOS 1.0.7 TestFlightda: 40 ta ekran, murabbiy kabineti, 13 bo‘limli panel, DUNS olindi</p><span>Biz shu yerdamiz</span></li>
+          <li data-reveal><b>Launched</b><time>Q4 2026</time><p>App Store va Google Play: Toshkentda padel va tennis, birinchi to‘lqin klublari bilan</p></li>
         </ol>
         <article class="partner" data-reveal>
           <div class="partner-logo"><img src="/assets/itek-logo.jpg" width="450" height="300" loading="lazy" alt="Itek Tennis Club"></div>
@@ -321,19 +320,69 @@
       </div>
     </section>
 
+    <!-- Implementation plan -->
+    <section class="section section--deep" id="plan">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>11</b> Amalga oshirish rejasi</p>
+          <h2 class="display h2">Bozorga<br>qanday chiqamiz</h2>
+          <p class="lead">Bosqichlar, texnologiyalar va sun’iy intellekt asosidagi yechimlar.</p>
+        </div>
+        <div class="plan-stages">
+          <article class="club-card" data-reveal><span class="tag">Q4 2026</span><h3>Toshkentda ishga tushirish</h3><p>Padel va tennis, birinchi yilda 30 klub va 120 kort, Itek Tennis Club — birinchi to‘lqin hamkori. Payme, Click va Uzum orqali real to‘lovlar.</p></article>
+          <article class="club-card" data-reveal><span class="tag">2027</span><h3>AI va yangi formatlar</h3><p>Kortlarda AI-kameralar, Apple Watch ilovasi, Android, futbol va jamoaviy sport turlari, brendlar bilan turnirlar.</p></article>
+          <article class="club-card" data-reveal><span class="tag">2028</span><h3>Butun O‘zbekiston</h3><p>Samarqand, Buxoro, Namangan va boshqa shaharlar, blogerlar shou-o‘yinlari bilan SQUAD medialigasi.</p></article>
+        </div>
+        <div class="plan-cols">
+          <div data-reveal>
+            <p class="eyebrow eyebrow--lavender">Texnologiyalar va vositalar</p>
+            <ul class="tech-list">
+              <li>iOS + Android · React Native / Expo, EAS</li><li>Firebase / Google Cloud · Auth, Firestore, Functions, App Check</li><li>Veb boshqaruv paneli · 13 bo‘lim</li><li>To‘lov · Payme · Click · Uzum · Atmos</li><li>SMS orqali kirish · telefon raqamiga bir martalik kod</li><li>Monitoring · Sentry, Firebase Analytics</li><li>Ma’lumotlar · O‘RQ-1125 talablariga mos gibrid arxitektura</li>
+            </ul>
+          </div>
+          <div data-reveal>
+            <p class="eyebrow eyebrow--lavender">Sun’iy intellekt va algoritmlar</p>
+            <div class="ai-grid">
+              <article class="feature"><span class="feature-ix">AI</span><h3>Daraja bo‘yicha tanlash</h3><p>0.0–7.0 reyting algoritmi: 5 o‘yinda kalibrovka, hisob va o‘zaro baholar — tengdoshlar bilan o‘ynaysiz.</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>AI-xaylaytlar</h3><p>Kortlardagi kameralar eng yaxshi lahzalarni o‘zi topadi va Instagram Stories uchun kliplar tayyorlaydi.</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>AI o‘yin tahlili</h3><p>Murabbiylar uchun videotahlil: o‘quvchining xatolari va rivojlanishi, reyting esa real o‘yin bo‘yicha aniqlashtiriladi.</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>Ishlab chiqishda AI</h3><p>AI-yordamchilar kod yozish va testlashni tezlashtiradi; arxitektura, mahsulot mantiqi va sifat nazorati — jamoada.</p></article>
+            </div>
+          </div>
+        </div>
+        <div class="plan-cta" data-reveal><a class="btn btn--lime" href="/demo/">Demoni ko‘rish</a></div>
+      </div>
+    </section>
+
     <!-- Team -->
     <section class="section section--deep" id="team">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>11</b> Jamoa</p>
+          <p class="eyebrow"><b>12</b> Jamoa</p>
           <h2 class="display h2">SQUADni<br><span class="accent">kim yaratmoqda</span></h2>
         </div>
         <div class="team">
-          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="Lev<br>Volkov"><small>CEO · asoschi</small><h3>Lev<br>Volkov</h3><p>KEY Investments, Berlin, 2023–2026: investitsiya loyihalari developmenti</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="Ivan<br>Gluxarev"><small>COO</small><h3>Ivan<br>Gluxarev</h3><p>KEY Investments, Berlin, 2023–2026: investitsiya loyihalarini kuzatib borish</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="Aleksandr<br>Gorodniy"><small>CMO · marketing</small><h3>Aleksandr<br>Gorodniy</h3><p>Work-O asoschisi: 10+ mlrd reklama ko‘rsatuvi, Sofascore, Flashscore, LiveScore bilan aloqalar</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="Kris<br>Santanjelo"><small>CTO · dasturlash</small><h3>Kris<br>Santanjelo</h3><p>Morrowform Studios, AQSh: ilova, backend va boshqaruv paneli</p></article>
-          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="Iroda<br>Tulyaganova"><small>Maslahatchi</small><h3>Iroda<br>Tulyaganova</h3><p>Osiyo tennis federatsiyasi vitse-prezidenti, O‘zbekiston tennis federatsiyasi rais o‘rinbosari, sobiq WTA №16</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="Lev<br>Volkov"><small>CEO · asoschi</small><h3>Lev<br>Volkov</h3><p>KEY Investments, Berlin, 2023–2026: investitsiya loyihalari developmenti</p><p class="mate-skills">Mahsulot · hamkorliklar · investloyihalar</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="Ivan<br>Gluxarev"><small>COO</small><h3>Ivan<br>Gluxarev</h3><p>KEY Investments, Berlin, 2023–2026: investitsiya loyihalarini kuzatib borish</p><p class="mate-skills">Operatsiyalar · klublarni ulash · jarayonlar</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="Aleksandr<br>Gorodniy"><small>CMO · marketing</small><h3>Aleksandr<br>Gorodniy</h3><p>Work-O asoschisi: 10+ mlrd reklama ko‘rsatuvi, Sofascore, Flashscore, LiveScore bilan aloqalar</p><p class="mate-skills">Performance-marketing · reklama · sport mediasi</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="Kris<br>Santanjelo"><small>CTO · dasturlash</small><h3>Kris<br>Santanjelo</h3><p>Morrowform Studios, AQSh: ilova, backend va boshqaruv paneli</p><p class="mate-skills">React Native · Firebase · backend va veb-panel</p></article>
+          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="Iroda<br>Tulyaganova"><small>Maslahatchi</small><h3>Iroda<br>Tulyaganova</h3><p>Osiyo tennis federatsiyasi vitse-prezidenti, O‘zbekiston tennis federatsiyasi rais o‘rinbosari, sobiq WTA №16</p><p class="mate-skills">Tennis federatsiyalari · turnirlar · soha aloqalari</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="section" id="why">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>13</b> Nega biz</p>
+          <h2 class="display h2">Nega aynan<br>bu jamoa</h2>
+        </div>
+        <div class="club-grid">
+          <article class="club-card" data-reveal><h3>Mahsulot allaqachon tayyor</h3><p>Slayddagi g‘oya emas: iOS 1.0.7 TestFlightda, 40 ta ekran, boshqaruv paneli va murabbiy kabineti.</p></article>
+          <article class="club-card" data-reveal><h3>Tennis sohasiga yo‘l</h3><p>Maslahatchi — Osiyo tennis federatsiyasi vitse-prezidenti va WTA reytingida sobiq №16: klublar, murabbiylar va turnirlar.</p></article>
+          <article class="club-card" data-reveal><h3>Sportda marketing</h3><p>CMO — 10+ mlrd reklama ko‘rsatuvi va Sofascore, Flashscore, LiveScore bilan to‘g‘ridan-to‘g‘ri aloqalar.</p></article>
+          <article class="club-card" data-reveal><h3>Loyihalarni ishga tushirish tajribasi</h3><p>Lev va Ivan uch yil Berlindagi KEY Investments’da investloyihalarni olib borishgan; asoschi o‘zi Toshkentda padel va tennis o‘ynaydi.</p></article>
         </div>
       </div>
     </section>

@@ -375,3 +375,26 @@ html.js [data-reveal].is-visible { opacity: 1; transform: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html.js [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* Pitch Day 3.0: roadmap stages, plan, team skills */
+.road b { display: block; margin-bottom: 6px; color: var(--text); font: italic 900 26px/1 var(--font-display); text-transform: uppercase; }
+.plan-stages { display: grid; gap: 10px; }
+.plan-stages .tag { margin-bottom: 12px; }
+.plan-cols { display: grid; gap: 32px; margin-top: 40px; }
+.tech-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.tech-list li { padding: 12px 14px; border: 1px solid var(--line-soft); border-radius: 14px; background: var(--surface-soft); color: var(--text); font-size: 14px; font-weight: 700; }
+.ai-grid { display: grid; gap: 10px; }
+.ai-grid .feature h3 { font-size: 20px; }
+.plan-cta { margin-top: 32px; }
+.mate-skills { margin: 8px 4px 0; color: var(--text); font-size: 12px; font-weight: 700; line-height: 1.35; }
+.mate-link { margin: 8px 4px 0; color: var(--lime); font-size: 12px; font-weight: 800; text-decoration: none; word-break: break-all; }
+.mate--lime .mate-skills { color: var(--ink); }
+.mate--lime .mate-link { color: var(--ink); text-decoration: underline; }
+@media (min-width: 640px) {
+  .plan-stages, .ai-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 960px) {
+  .road.road--stages { grid-template-columns: repeat(4, 1fr); }
+  .plan-stages { grid-template-columns: repeat(3, 1fr); }
+  .plan-cols { grid-template-columns: 5fr 7fr; align-items: start; }
+}

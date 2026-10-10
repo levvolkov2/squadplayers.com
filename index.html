@@ -35,6 +35,7 @@
         <a href="#clubs">Клубам</a>
         <a href="#coaches">Тренерам</a>
         <a href="#team">Команда</a>
+        <a href="/demo/">Демо</a>
         <a href="#contact">Контакты</a>
       </nav>
       <div class="lang-switcher" aria-label="Language">
@@ -299,16 +300,14 @@
       <span class="anchor" id="partners"></span>
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>10</b> Где мы сейчас</p>
+          <p class="eyebrow"><b>10</b> Дорожная карта</p>
           <h2 class="display h2">Продукт готов —<br>идём на запуск</h2>
         </div>
-        <ol class="road">
-          <li class="done" data-reveal><time>03.09.26</time><p>ООО SQUAD зарегистрировано</p></li>
-          <li class="done" data-reveal><time>Сен 2026</time><p>40 экранов, кабинет тренера, панель управления</p></li>
-          <li class="now" data-reveal><time>Окт 2026</time><p>iOS 1.0.7 в TestFlight, DUNS получен</p><span>Мы здесь</span></li>
-          <li data-reveal><time>Q4 2026</time><p>App Store и Google Play: падел и теннис в Ташкенте</p></li>
-          <li data-reveal><time>2027</time><p>Apple Watch, AI-камеры, футбол, блогеры</p></li>
-          <li data-reveal><time>2028</time><p>Весь Узбекистан и своя медиалига</p></li>
+        <ol class="road road--stages">
+          <li class="done" data-reveal><b>Idea</b><time>2026</time><p>Исследование рынка Ташкента, бизнес-модель, интервью с игроками и клубами</p></li>
+          <li class="done" data-reveal><b>Prototype</b><time>Июль 2026</time><p>Кликабельный прототип приложения и панели управления, тесты сценариев</p></li>
+          <li class="now" data-reveal><b>MVP</b><time>Сен–Окт 2026</time><p>ООО зарегистрировано, iOS 1.0.7 в TestFlight: 40 экранов, кабинет тренера, панель из 13 разделов, DUNS получен</p><span>Мы здесь</span></li>
+          <li data-reveal><b>Launched</b><time>Q4 2026</time><p>App Store и Google Play: падел и теннис в Ташкенте с клубами первой волны</p></li>
         </ol>
         <article class="partner" data-reveal>
           <div class="partner-logo"><img src="/assets/itek-logo.jpg" width="450" height="300" loading="lazy" alt="Itek Tennis Club"></div>
@@ -321,19 +320,69 @@
       </div>
     </section>
 
+    <!-- Implementation plan -->
+    <section class="section section--deep" id="plan">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>11</b> План реализации</p>
+          <h2 class="display h2">Как мы выходим<br>на рынок</h2>
+          <p class="lead">Этапы, технологии и решения на базе искусственного интеллекта.</p>
+        </div>
+        <div class="plan-stages">
+          <article class="club-card" data-reveal><span class="tag">Q4 2026</span><h3>Запуск в Ташкенте</h3><p>Падел и теннис, 30 клубов и 120 кортов в первый год, Itek Tennis Club — партнёр первой волны. Боевые платежи через Payme, Click и Uzum.</p></article>
+          <article class="club-card" data-reveal><span class="tag">2027</span><h3>AI и новые форматы</h3><p>AI-камеры на кортах, приложение для Apple Watch, Android, футбол и командные виды спорта, турниры с брендами.</p></article>
+          <article class="club-card" data-reveal><span class="tag">2028</span><h3>Весь Узбекистан</h3><p>Самарканд, Бухара, Наманган и другие города, медиалига SQUAD с шоу-матчами блогеров.</p></article>
+        </div>
+        <div class="plan-cols">
+          <div data-reveal>
+            <p class="eyebrow eyebrow--lavender">Технологии и инструменты</p>
+            <ul class="tech-list">
+              <li>iOS + Android · React Native / Expo, EAS</li><li>Firebase / Google Cloud · Auth, Firestore, Functions, App Check</li><li>Веб-панель управления · 13 разделов</li><li>Оплата · Payme · Click · Uzum · Atmos</li><li>Вход по SMS · одноразовый код по номеру телефона</li><li>Мониторинг · Sentry, Firebase Analytics</li><li>Данные · гибридная архитектура под ЗРУ-1125</li>
+            </ul>
+          </div>
+          <div data-reveal>
+            <p class="eyebrow eyebrow--lavender">Решения на базе ИИ и алгоритмы</p>
+            <div class="ai-grid">
+              <article class="feature"><span class="feature-ix">AI</span><h3>Подбор по уровню</h3><p>Алгоритм рейтинга 0.0–7.0: калибровка за 5 матчей, счёт и взаимные оценки — играешь с равными.</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>AI-хайлайты</h3><p>Камеры на кортах сами находят лучшие моменты и нарезают клипы для Instagram Stories.</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>AI-разбор игры</h3><p>Видеоаналитика для тренеров: ошибки и прогресс ученика, а рейтинг уточняется по реальной игре.</p></article>
+              <article class="feature"><span class="feature-ix">AI</span><h3>AI в разработке</h3><p>AI-ассистенты ускоряют код и тестирование; архитектура, логика продукта и контроль качества — за командой.</p></article>
+            </div>
+          </div>
+        </div>
+        <div class="plan-cta" data-reveal><a class="btn btn--lime" href="/demo/">Смотреть демо</a></div>
+      </div>
+    </section>
+
     <!-- Team -->
     <section class="section section--deep" id="team">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <p class="eyebrow"><b>11</b> Команда</p>
+          <p class="eyebrow"><b>12</b> Команда</p>
           <h2 class="display h2">Кто делает<br><span class="accent">SQUAD</span></h2>
         </div>
         <div class="team">
-          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="Лев<br>Волков"><small>CEO · основатель</small><h3>Лев<br>Волков</h3><p>KEY Investments, Берлин, 2023–2026: девелопмент инвестпроектов</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="Иван<br>Глухарев"><small>COO</small><h3>Иван<br>Глухарев</h3><p>KEY Investments, Берлин, 2023–2026: сопровождение инвестпроектов</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="Александр<br>Городный"><small>CMO · маркетинг</small><h3>Александр<br>Городный</h3><p>Основатель Work-O: 10+ млрд рекламных показов, связи с Sofascore, Flashscore, LiveScore</p></article>
-          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="Крис<br>Сантанджело"><small>CTO · разработка</small><h3>Крис<br>Сантанджело</h3><p>Morrowform Studios, США: приложение, бэкенд и панель управления</p></article>
-          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="Ирода<br>Туляганова"><small>Эдвайзер</small><h3>Ирода<br>Туляганова</h3><p>Вице-президент Азиатской теннисной федерации, зампред Федерации тенниса Узбекистана, экс-№16 WTA</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="Лев<br>Волков"><small>CEO · основатель</small><h3>Лев<br>Волков</h3><p>KEY Investments, Берлин, 2023–2026: девелопмент инвестпроектов</p><p class="mate-skills">Продукт · партнёрства · инвестпроекты</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="Иван<br>Глухарев"><small>COO</small><h3>Иван<br>Глухарев</h3><p>KEY Investments, Берлин, 2023–2026: сопровождение инвестпроектов</p><p class="mate-skills">Операции · подключение клубов · процессы</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="Александр<br>Городный"><small>CMO · маркетинг</small><h3>Александр<br>Городный</h3><p>Основатель Work-O: 10+ млрд рекламных показов, связи с Sofascore, Flashscore, LiveScore</p><p class="mate-skills">Performance-маркетинг · реклама · спортивные медиа</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="Крис<br>Сантанджело"><small>CTO · разработка</small><h3>Крис<br>Сантанджело</h3><p>Morrowform Studios, США: приложение, бэкенд и панель управления</p><p class="mate-skills">React Native · Firebase · бэкенд и веб-панель</p></article>
+          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="Ирода<br>Туляганова"><small>Эдвайзер</small><h3>Ирода<br>Туляганова</h3><p>Вице-президент Азиатской теннисной федерации, зампред Федерации тенниса Узбекистана, экс-№16 WTA</p><p class="mate-skills">Федерации тенниса · турниры · связи в индустрии</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="section" id="why">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>13</b> Почему мы</p>
+          <h2 class="display h2">Почему именно<br>эта команда</h2>
+        </div>
+        <div class="club-grid">
+          <article class="club-card" data-reveal><h3>Продукт уже собран</h3><p>Не идея на слайде: iOS 1.0.7 в TestFlight, 40 экранов, панель управления и кабинет тренера.</p></article>
+          <article class="club-card" data-reveal><h3>Доступ к теннису</h3><p>Эдвайзер — вице-президент Азиатской теннисной федерации и экс-№16 WTA: клубы, тренеры и турниры.</p></article>
+          <article class="club-card" data-reveal><h3>Маркетинг в спорте</h3><p>CMO — 10+ млрд рекламных показов и прямые связи с Sofascore, Flashscore и LiveScore.</p></article>
+          <article class="club-card" data-reveal><h3>Опыт запуска проектов</h3><p>Лев и Иван три года вели инвестпроекты в KEY Investments в Берлине; основатель сам играет в падел и теннис в Ташкенте.</p></article>
         </div>
       </div>
     </section>
