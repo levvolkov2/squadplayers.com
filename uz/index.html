@@ -2,180 +2,383 @@
 <html lang="uz" data-lang="uz">
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>SQUAD — Bugun nima o‘ynaymiz?</title>
-  <meta name="description" content="SQUAD o‘yinchilar, maydonchalar va murabbiylarni birlashtiradi: o‘yinni toping, kortni band qiling va reytingda o‘sing.">
-  <meta property="og:title" content="SQUAD — Bugun nima o‘ynaymiz?">
-  <meta property="og:description" content="Kort, o‘yin, mashg‘ulot, chat va reyting — bitta ilovada.">
+  <meta name="theme-color" content="#17171a">
+  <title>SQUAD — Kim bilan? Qayerda? Qachon? Toshkentda padel va tennis</title>
+  <meta name="description" content="SQUAD — padel va tennis bitta ilovada: qo‘ng‘iroqlarsiz kort, 0.0–7.0 darajadagi raqiblar, murabbiylar va o‘z ulushingizni to‘lash. iOS 1.0.7 allaqachon TestFlightda.">
+  <link rel="canonical" href="https://squadplayers.com/uz/index.html">
+  <meta property="og:title" content="SQUAD — Kim bilan? Qayerda? Qachon? Toshkentda padel va tennis">
+  <meta property="og:description" content="SQUAD — padel va tennis bitta ilovada: qo‘ng‘iroqlarsiz kort, 0.0–7.0 darajadagi raqiblar, murabbiylar va o‘z ulushingizni to‘lash. iOS 1.0.7 allaqachon TestFlightda.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/og.svg">
+  <meta property="og:url" content="https://squadplayers.com/uz/index.html">
+  <meta property="og:image" content="https://squadplayers.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="alternate" hreflang="ru" href="/ru/index.html">
-  <link rel="alternate" hreflang="uz" href="/uz/index.html">
-  <link rel="alternate" hreflang="en" href="/en/index.html">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260927">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://squadplayers.com/ru/index.html">
+  <link rel="alternate" hreflang="uz" href="https://squadplayers.com/uz/index.html">
+  <link rel="alternate" hreflang="en" href="https://squadplayers.com/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://squadplayers.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v=20261010">
 </head>
 <body data-page="home">
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="wordmark" href="/uz/index.html" aria-label="SQUAD">SQUAD<span>.</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#how" data-i18n="navHow">Как это работает</a>
-        <a href="#sports" data-i18n="navSports">Виды спорта</a>
-        <a href="#partners" data-i18n="navPartners">Партнёры</a>
-        <a href="#venues-section" data-i18n="navVenues">Площадкам</a>
-        <a href="#coaches-section" data-i18n="navCoaches">Тренерам</a>
-        <a href="/contacts.html" data-i18n="navContacts">Контакты</a>
+      <nav class="main-nav" aria-label="Menyu">
+        <a href="#how">Qanday ishlaydi</a>
+        <a href="#clubs">Klublarga</a>
+        <a href="#coaches">Murabbiylarga</a>
+        <a href="#team">Jamoa</a>
+        <a href="#contact">Aloqa</a>
       </nav>
-      <div class="lang-switcher" aria-label="Language switcher">
-        <a href="/ru/index.html" data-lang-link="ru" aria-current="page">RU</a>
-        <a href="/uz/index.html" data-lang-link="uz">UZ</a>
+      <div class="lang-switcher" aria-label="Language">
+        <a href="/ru/index.html" data-lang-link="ru">RU</a>
+        <a href="/uz/index.html" data-lang-link="uz" aria-current="page">UZ</a>
         <a href="/en/index.html" data-lang-link="en">EN</a>
       </div>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menyuni ochish"><span></span><span></span></button>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-court"><i></i><i></i><i></i><i></i></div>
-        <div class="hero-ball hero-ball--lime"></div><div class="hero-ball hero-ball--lav"></div>
-        <div class="hero-scan"></div><span class="hero-visual-label">PLAY / CONNECT / REPEAT</span>
-      </div>
+    <!-- Hero -->
+    <section class="hero" id="top">
       <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow" data-i18n="heroEyebrow">Спортивная экосистема Ташкента</p>
-          <h1 class="display hero-title"><span data-i18n="heroLine1">ВО ЧТО</span><br><span class="hero-title-accent" data-i18n="heroLine2">ИГРАЕМ</span><br><span data-i18n="heroLine3">СЕГОДНЯ?</span></h1>
-          <p class="hero-sub" data-i18n="heroCopy">Бронируйте корты, находите игроков своего уровня и тренируйтесь с тренерами — в одном приложении.</p>
-          <div class="hero-meta">
-            <a class="btn btn--lime" href="#how" data-i18n="heroButton">Смотреть, как это работает</a>
-            <small data-i18n="heroSoon">iOS и Android · скоро</small>
+        <div class="hero-copy">
+          <p class="status-pill"><i aria-hidden="true"></i>iOS 1.0.7 · allaqachon TestFlightda</p>
+          <h1 class="display hero-title">KIM BILAN?<br><span class="accent">QAYERDA?</span><br>QACHON?</h1>
+          <p class="hero-sub">Padel va tennis: kort, darajangizdagi raqiblar va murabbiylar — bitta ilovada.</p>
+          <div class="hero-actions">
+            <a class="btn btn--lime" href="#how">Qanday ishlaydi</a>
+            <a class="btn btn--ghost" href="#clubs">Klub va murabbiylarga</a>
           </div>
+          <p class="hero-place">Toshkent · ishga tushirish Q4 2026</p>
         </div>
-        <div class="hero-scroll"><span data-i18n="heroPlace">Ташкент · RU / UZ / EN</span></div>
+        <figure class="device hero-device">
+          <img src="/assets/img/screen-home.jpg" width="460" height="998" alt="SQUAD ilovasining bosh ekrani" fetchpriority="high">
+        </figure>
       </div>
     </section>
 
-    <section class="section section--lime">
-      <span class="slash-word" aria-hidden="true">PLAY</span>
-      <div class="wrap intro-panel">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Padel · Tennis · Daraja bo‘yicha o‘yinlar · Murabbiylar · AI-xaylaytlar · </span><span>Padel · Tennis · Daraja bo‘yicha o‘yinlar · Murabbiylar · AI-xaylaytlar · </span>
+      </div>
+    </div>
+
+    <!-- Problem -->
+    <section class="section" id="problem">
+      <div class="wrap split">
         <div data-reveal>
-          <p class="eyebrow" data-i18n="introEyebrow">Никаких пустых чатов</p>
-          <h2 class="display intro-title" data-i18n="introTitle">Больше игры. Меньше поиска.</h2>
+          <p class="eyebrow"><b>01</b> O‘yinchi muammosi</p>
+          <h2 class="display h2">O‘ynash —<br>bu kvest</h2>
+          <ul class="pain-list">
+            <li><span>Kort</span>qo‘ng‘iroqlar orqali: «faqat 22:30 bor»</li>
+            <li><span>Raqib</span>o‘z darajangizda — Telegram-chatlar orqali</li>
+            <li><span>Pul</span>500 000 to‘ladingiz — keyin bir hafta do‘stlardan yig‘asiz</li>
+          </ul>
         </div>
-        <p class="intro-copy" data-reveal="scale" data-i18n="introCopy">SQUAD собирает всё вокруг матча: корт, соперников, тренировку, чат и рейтинг. Вы выбираете спорт — мы помогаем начать.</p>
+        <div class="chat" data-reveal aria-label="Guruh chati namunasi">
+          <div class="chat-head"><b>П</b><div><strong>Padel · o‘yin izlaymiz</strong><small>guruh chati</small></div></div>
+          <p class="msg">Bugun 19:00 ga kort bormi?<time>18:42</time></p>
+          <p class="msg">Uchta klubga qo‘ng‘iroq qildim — faqat 22:30<time>18:51</time></p>
+          <p class="msg">To‘rtinchi kerak, daraja ~3<time>18:55</time></p>
+          <p class="msg">Kort uchun 500 000 to‘ladim, 125 dan tashlang<time>19:06</time></p>
+          <p class="msg msg--fail">Bo‘ldi, bekor. Keyingi haftaga qoldiramiz<time>19:31</time></p>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="how">
+    <!-- Solution -->
+    <section class="section section--deep" id="how">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <div><p class="eyebrow" data-i18n="howEyebrow">Сценарий на четыре шага</p><h2 class="display section-title" data-i18n="howTitle">ИГРА НАЧИНАЕТСЯ С ОДНОГО ТАПА</h2></div>
-          <p class="section-lead" data-i18n="howLead">От первого поиска до нового места в рейтинге — всё происходит в приложении.</p>
+          <p class="eyebrow"><b>02</b> Yechim</p>
+          <h2 class="display h2">Butun o‘yin —<br>bitta ilovada</h2>
         </div>
-        <div class="steps">
-          <article class="step" data-reveal><span class="step-index">01</span><h3 data-i18n="step1">Выберите спорт</h3><p data-i18n="step1p">Падел, теннис или футбол / футзал — найдите свой ритм.</p></article>
-          <article class="step" data-reveal><span class="step-index">02</span><h3 data-i18n="step2">Найдите игру</h3><p data-i18n="step2p">Выберите корт или открытый матч подходящего уровня.</p></article>
-          <article class="step" data-reveal><span class="step-index">03</span><h3 data-i18n="step3">Оплатите в приложении</h3><p data-i18n="step3p">100% предоплата. Итоговая цена видна до оплаты.</p></article>
-          <article class="step" data-reveal><span class="step-index">04</span><h3 data-i18n="step4">Играйте и растите</h3><p data-i18n="step4p">Введите счёт, общайтесь в чате и поднимайтесь в рейтинге.</p></article>
+        <div class="features">
+          <article class="feature" data-reveal><span class="feature-ix">01</span><h3>Qo‘ng‘iroqlarsiz kort</h3><p>100% oldindan to‘lov bilan tezkor bron — klub «havo» emas, real pulni ko‘radi.</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">02</span><h3>Daraja bo‘yicha o‘yin</h3><p>0.0–7.0 shkala va 5 o‘yinda kalibrovka — tengdoshlar bilan o‘ynaysiz.</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">03</span><h3>Har kim o‘z ulushini to‘laydi</h3><p>Narx hammaga bo‘linadi — yoki bitta odam hamma uchun to‘laydi: juftlik, do‘stlar, korporativ.</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">04</span><h3>Murabbiy bir necha bosishda</h3><p>Profil, jadval, yozilish va mashg‘ulot uchun to‘lov.</p></article>
+        </div>
+        <div class="screens-head" data-reveal>
+          <p class="eyebrow eyebrow--lavender">1.0.7 versiyaning haqiqiy ekranlari</p>
+          <p class="screens-hint">Suring →</p>
+        </div>
+        <div class="screens" tabindex="0" aria-label="1.0.7 versiyaning haqiqiy ekranlari">
+          <figure class="device"><img src="/assets/img/screen-welcome.jpg" width="460" height="998" loading="lazy" alt="SQUAD start ekrani"><figcaption>Start</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-home.jpg" width="460" height="998" loading="lazy" alt="SQUAD ilovasining bosh ekrani"><figcaption>Bosh sahifa</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-levels.jpg" width="460" height="998" loading="lazy" alt="O‘yinchining boshlang‘ich darajalari ekrani"><figcaption>Darajalar</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-profile.jpg" width="460" height="998" loading="lazy" alt="Daraja ko‘rsatilgan o‘yinchi profili"><figcaption>Profil</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-coach.jpg" width="460" height="997" loading="lazy" alt="SQUADda murabbiy jadvali"><figcaption>Murabbiy kabineti</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="section section--deep" id="app">
-      <div class="wrap app-stage">
+    <!-- Price -->
+    <section class="section section--lime" id="price">
+      <div class="wrap split split--center">
         <div data-reveal>
-          <p class="eyebrow" data-i18n="appEyebrow">Ваш следующий матч</p>
-          <h2 class="display stage-title" data-i18n="appTitle">ПРИЛОЖЕНИЕ, КОТОРОЕ ДЕРЖИТ ИГРУ В ДВИЖЕНИИ</h2>
-          <p class="stage-copy" data-i18n="appCopy">Открытые матчи, корт рядом, игроки вашего уровня и тренировки через площадки‑партнёры SQUAD.</p>
+          <p class="eyebrow"><b>03</b> Hamyonbop</p>
+          <h2 class="display h2">Padel 500 000 emas,<br>125 000 so‘m</h2>
+          <p class="lead">Kechki 90 daqiqalik padel 500 000 so‘m turadi. SQUADda har kim o‘z ulushini to‘laydi — elita sporti hamyonbop bo‘ladi.</p>
         </div>
-        <div class="phone-wrap" data-reveal="scale" aria-label="SQUAD app preview">
-          <div class="phone-glow" aria-hidden="true"></div>
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="phone-top"><span>12:52</span><span>● ● ●</span></div>
-              <div class="avatar">C</div>
-              <p class="phone-hello" data-i18n="phoneHello">Добрый день, Client</p>
-              <h3 class="phone-heading" data-i18n="phoneHeading">Во что играем сегодня?</h3>
-              <div class="sport-tabs"><span data-i18n="phonePadel">ПАДЕЛ</span><span data-i18n="phoneTennis">ТЕННИС</span><span data-i18n="phoneFootball">ФУТБОЛ</span></div>
-              <div class="phone-card"><span class="phone-date" data-i18n="phoneDate">ПН, 21 СЕНТ. · 18:00</span><h4 data-i18n="phoneMatch">Открытый матч</h4><p data-i18n="phoneMatchMeta">Sports Club · padel court · осталось мест: 1</p><div class="phone-progress"></div></div>
-              <div class="phone-card phone-card--dark"><h4 data-i18n="phoneCourts">Ближайшее время на кортах</h4><p data-i18n="phoneCourt1">18:00 · Падел · Tashkent</p><p style="margin-top: 8px" data-i18n="phoneCourt2">18:30 · Теннис · Tashkent</p></div>
-              <div class="phone-card phone-card--dark"><h4 data-i18n="phoneRating">Ваш рейтинг</h4><p data-i18n="phoneRatingMeta">0.0–7.0 · TASHKENT</p></div>
-              <div class="phone-nav"><span>⌂</span><span>ϟ</span><span class="plus">+</span><span>◌</span><span>♙</span></div>
+        <div class="divide" data-reveal>
+          <div class="divide-total"><strong>500 000</strong><span>kechki 90 daqiqalik kort · Padel.uz</span></div>
+          <div class="divide-op">÷ 4</div>
+          <div class="divide-grid">
+            <div><b>A</b><strong>125 000</strong><span>o‘z ulushi</span></div>
+            <div><b>B</b><strong>125 000</strong><span>o‘z ulushi</span></div>
+            <div><b>C</b><strong>125 000</strong><span>o‘z ulushi</span></div>
+            <div><b>D</b><strong>125 000</strong><span>o‘z ulushi</span></div>
+          </div>
+          <ul class="divide-notes">
+            <li><b>Qarzsiz —</b> har kim o‘zi, darhol ilovada to‘laydi</li>
+            <li><b>Bittasi hamma uchun —</b> juftlik, do‘stlar yoki korporativ bitta to‘lovda</li>
+            <li><b>Abonementsiz</b> va tashrif limitisiz: faqat o‘yin uchun to‘laysiz</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product proof -->
+    <section class="section" id="product">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>04</b> Mahsulot</p>
+          <h2 class="display h2">Bu g‘oya emas.<br>Bu tayyor ilova</h2>
+        </div>
+        <div class="stats">
+          <div class="stat" data-reveal><strong>40</strong><span>mobil ilova ekranlari</span></div>
+          <div class="stat" data-reveal><strong>13</strong><span>boshqaruv panelidagi bo‘limlar</span></div>
+          <div class="stat" data-reveal><strong>1.0.7</strong><span>TestFlightdagi iOS versiyasi</span></div>
+          <div class="stat stat--lime" data-reveal><strong>DUNS</strong><span>olindi — App Store va Google Playni kutyapmiz</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaches -->
+    <section class="section section--deep" id="coaches">
+      <span class="anchor" id="coaches-section"></span>
+      <div class="wrap split split--center">
+        <div data-reveal>
+          <p class="eyebrow"><b>05</b> Asosiy farq</p>
+          <h2 class="display h2">Murabbiy — bozorning<br>uchinchi tomoni</h2>
+          <p class="lead">Murabbiy shogirdlar, jadval va to‘lovni oladi. Klub esa avval kassadan o‘tmagan pullardan ulush oladi.</p>
+          <div class="share">
+            <div><strong>10%</strong><span>SQUAD mashg‘ulotdan</span></div>
+            <div class="share--lime"><strong>5%</strong><span>klubga — murabbiylarni o‘zi olib kelishi uchun sabab</span></div>
+          </div>
+        </div>
+        <div class="triangle" data-reveal aria-label="SQUADda o‘yinchilar, klublar va murabbiylar">
+          <div class="tri-node tri-node--players"><b>O‘yinchilar</b><span>o‘yinlar va o‘sish</span></div>
+          <div class="tri-node tri-node--clubs"><b>Klublar</b><span>bronlar va bandlik</span></div>
+          <div class="tri-node tri-node--coaches"><b>Murabbiylar</b><span>shogirdlar va to‘lov</span></div>
+          <div class="tri-core">SQUAD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clubs -->
+    <section class="section" id="clubs">
+      <span class="anchor" id="venues-section"></span>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>06</b> Klublarga</p>
+          <h2 class="display h2">Bo‘sh kort soati —<br><span class="accent">minus 380 000 so‘m</span></h2>
+          <p class="lead">Toshkentdagi to‘qqizta padel kortida bir soatning o‘rtacha narxi shunday. Kunduzi kortlar bo‘sh turadi, telefon orqali bron esa — «havo».</p>
+        </div>
+        <div class="day" data-reveal aria-label="Ish kunida bitta kortning bandligi">
+          <div class="day-bars">
+            <i></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+          </div>
+          <div class="day-axis"><span>06</span><span>11</span><span>17</span><span>24</span></div>
+          <div class="day-legend"><span><i class="on"></i>band</span><span><i></i>bo‘sh</span><small>Ish kunida kort bandligi · Toshkentdagi 9 padel kortining o‘rtacha narxlari (Afisha.uz, 11.2025)</small></div>
+        </div>
+        <div class="club-grid">
+          <article class="club-card" data-reveal><h3>Real pul</h3><p>Bronda 100% oldindan to‘lov — «qo‘ng‘iroq qilib kelmadi» degan holat yo‘q.</p></article>
+          <article class="club-card" data-reveal><h3>Kunduzgi soatlar</h3><p>O‘yinchilar faqat 19:00 ga emas, kunduzgi vaqtga ham raqib topadi.</p></article>
+          <article class="club-card" data-reveal><h3>Murabbiylar kassada</h3><p>Kortlaringizdagi mashg‘ulotlar SQUAD orqali o‘tadi — klub har biridan 5% oladi.</p></article>
+          <article class="club-card" data-reveal><h3>Boshqaruv paneli</h3><p>Narxlar, jadval, bronlar, murabbiylar va tushum — bir joyda.</p></article>
+        </div>
+        <article class="decree" data-reveal>
+          <div class="decree-date"><strong>01.01</strong><span>2027</span></div>
+          <div>
+            <p class="eyebrow">Nega hozir · PQ-347, 21.09.2026</p>
+            <h3>Davlat tennis kortlari o‘zini o‘zi moliyalashtirishga o‘tadi</h3>
+            <p>2027-yil 1-yanvardan kortlar pullik xizmatlar narxini o‘zi belgilaydi — ularga sotuv vositasi kerak. SQUAD uni bugunoq beradi: bron, to‘lov va birinchi kundan o‘yinchilar.</p>
+          </div>
+        </article>
+        <div class="club-cta" data-reveal>
+          <p>Birinchi to‘lqin hamkorlariga — birinchi oy bepul.</p>
+          <a class="btn btn--lime" href="mailto:ceo@squadplayers.com?subject=Klubni%20SQUADga%20ulash">Klubni ulash</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next -->
+    <section class="section section--deep" id="next">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>07</b> Keyingi qadam</p>
+          <h2 class="display h2">Har bir kortda soat<br>va AI-kameralar</h2>
+        </div>
+        <div class="next-grid">
+          <article class="next-card" data-reveal>
+            <div class="watch" aria-hidden="true">
+              <small>Padel · 2-kort</small>
+              <div class="watch-score"><span>Biz</span><b>6 3</b><span>Ular</span><b>4 2</b></div>
+              <strong>47:12</strong>
+              <em>13 daqiqa qoldi</em>
             </div>
+            <div><span class="tag">2027</span><h3>Apple Watchda SQUAD</h3><p>Hisob va taymer qo‘lingizda. «Vaqt tugadi» signali — klub jadvalni kechikishsiz ushlaydi.</p></div>
+          </article>
+          <article class="next-card" data-reveal>
+            <div class="cam" aria-hidden="true">
+              <small><i></i>REC · 2-KORT</small>
+              <span>AI · XAYLAYTLAR</span>
+              <p>Smesh · 0:47<br>Eys · 12:03</p>
+              <b>↗ Stories</b>
+            </div>
+            <div><span class="tag">2027</span><h3>AI-kameralar bizning hisobimizdan</h3><p>Eng yaxshi lahzalar o‘zi kesiladi va Instagram Storiesga ketadi. Murabbiyga — shogird xatolari tahlili.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="section" id="community">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>08</b> Hamjamiyat</p>
+          <h2 class="display h2">O‘yinchilar o‘yinchilarni<br>olib keladi</h2>
+        </div>
+        <div class="comm-grid">
+          <article class="comm-card comm-card--board" data-reveal>
+            <small>Shahar reytingi</small><h3>Har bir o‘yin uchun ochko</h3>
+            <ol class="board">
+              <li><span>#1</span>O‘yinchi · 31<b>5.4</b></li>
+              <li><span>#2</span>O‘yinchi · 27<b>5.1</b></li>
+              <li><span>#3</span>O‘yinchi · 22<b>4.9</b></li>
+            </ol>
+            <p>Shaharlar bo‘yicha liderbordlar va oyning top-xaylayti.</p>
+          </article>
+          <article class="comm-card" data-reveal><small>Blogerlar</small><h3>«Men bilan o‘yna»</h3><p>Bloger kartasi, shou-o‘yinlar va muxlislar bilan o‘yin.</p></article>
+          <article class="comm-card" data-reveal><small>Yulduz slotlari</small><h3>Mashg‘ulotlar auksioni</h3><p>Top-murabbiylar va o‘yinchilar, cheklangan joylar.</p></article>
+          <article class="comm-card" data-reveal><small>Brendlar</small><h3>Brendlar bilan turnirlar</h3><p>Sport brendlari kolleksiyalari chiqishiga tematik tadbirlar.</p></article>
+          <article class="comm-card" data-reveal><small>Reklama</small><h3>Ilovada reklama</h3><p>Havaskor sportchilar kerak bo‘lgan brendlar uchun: sport do‘konlari, inventar va boshqalar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market -->
+    <section class="section section--lavender" id="market">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>09</b> Bozor</p>
+          <h2 class="display h2">O‘zbekiston sport uchun<br>allaqachon to‘laydi</h2>
+        </div>
+        <div class="market">
+          <div data-reveal><strong>7,09 mln</strong><p>kishi O‘zbekistonda muntazam sport bilan shug‘ullanadi</p><small>stat.uz · Milliy statistika qo‘mitasi, 2024</small></div>
+          <div data-reveal><strong>52 417</strong><p>sport inshooti — va deyarli hammasi telefon orqali band qilinadi</p><small>stat.uz · Davstatqo‘m, 2022</small></div>
+          <div data-reveal><strong>58 334</strong><p>dunyoda padel korti, 2025-yilda +16%</p><small>Global Padel Report 2026</small></div>
+          <div data-reveal><strong>200–600</strong><p>ming so‘m — Toshkentda padelning bir soati</p><small>Afisha.uz, 11.2025</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap + partner -->
+    <section class="section" id="roadmap">
+      <span class="anchor" id="partners"></span>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>10</b> Hozir qayerdamiz</p>
+          <h2 class="display h2">Mahsulot tayyor —<br>ishga tushiramiz</h2>
+        </div>
+        <ol class="road">
+          <li class="done" data-reveal><time>03.09.26</time><p>SQUAD MChJ ro‘yxatdan o‘tdi</p></li>
+          <li class="done" data-reveal><time>Sen 2026</time><p>40 ta ekran, murabbiy kabineti, boshqaruv paneli</p></li>
+          <li class="now" data-reveal><time>Okt 2026</time><p>iOS 1.0.7 TestFlightda, DUNS olindi</p><span>Biz shu yerdamiz</span></li>
+          <li data-reveal><time>Q4 2026</time><p>App Store va Google Play: Toshkentda padel va tennis</p></li>
+          <li data-reveal><time>2027</time><p>Apple Watch, AI-kameralar, futbol, blogerlar</p></li>
+          <li data-reveal><time>2028</time><p>Butun O‘zbekiston va o‘z medialigamiz</p></li>
+        </ol>
+        <article class="partner" data-reveal>
+          <div class="partner-logo"><img src="/assets/itek-logo.jpg" width="450" height="300" loading="lazy" alt="Itek Tennis Club"></div>
+          <div>
+            <p class="eyebrow">Birinchi to‘lqin hamkori</p>
+            <h3>Itek Tennis Club</h3>
+            <p>Toshkentda 2 ta filial va klubning 200+ faol rezidenti.</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="sports">
+    <!-- Team -->
+    <section class="section section--deep" id="team">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <div><p class="eyebrow" data-i18n="sportsEyebrow">Выберите свой темп</p><h2 class="display section-title" data-i18n="sportsTitle">ИГРАЕМ ВМЕСТЕ</h2></div>
-          <p class="section-lead" data-i18n="sportsLead">Первые виды спорта уже внутри. Остальные подключаем по мере роста комьюнити.</p>
+          <p class="eyebrow"><b>11</b> Jamoa</p>
+          <h2 class="display h2">SQUADni<br><span class="accent">kim yaratmoqda</span></h2>
         </div>
-        <div class="sports-grid">
-          <article class="sport-card" data-word="ПАДЕЛ" data-reveal><small>01 / active</small><h3 data-i18n="padel">Падел</h3></article>
-          <article class="sport-card" data-word="ТЕННИС" data-reveal><small>02 / active</small><h3 data-i18n="tennis">Теннис</h3></article>
-          <article class="sport-card sport-card--soon" data-word="FOOTBALL" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>03 / coming soon</small><h3 data-i18n="football">Футбол / футзал</h3></article>
-          <article class="sport-card" data-word="BASKET" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>04</small><h3 data-i18n="basketball">Баскетбол</h3></article>
-          <article class="sport-card" data-word="VOLLEY" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>05</small><h3 data-i18n="volleyball">Волейбол</h3></article>
-          <article class="sport-card" data-word="BADMINTON" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>06</small><h3 data-i18n="badminton">Бадминтон</h3></article>
-          <article class="sport-card" data-word="PING PONG" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>07</small><h3 data-i18n="tableTennis">Настольный теннис</h3></article>
+        <div class="team">
+          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="Lev<br>Volkov"><small>CEO · asoschi</small><h3>Lev<br>Volkov</h3><p>KEY Investments, Berlin, 2023–2026: investitsiya loyihalari developmenti</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="Ivan<br>Gluxarev"><small>COO</small><h3>Ivan<br>Gluxarev</h3><p>KEY Investments, Berlin, 2023–2026: investitsiya loyihalarini kuzatib borish</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="Aleksandr<br>Gorodniy"><small>CMO · marketing</small><h3>Aleksandr<br>Gorodniy</h3><p>Work-O asoschisi: 10+ mlrd reklama ko‘rsatuvi, Sofascore, Flashscore, LiveScore bilan aloqalar</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="Kris<br>Santanjelo"><small>CTO · dasturlash</small><h3>Kris<br>Santanjelo</h3><p>Morrowform Studios, AQSh: ilova, backend va boshqaruv paneli</p></article>
+          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="Iroda<br>Tulyaganova"><small>Maslahatchi</small><h3>Iroda<br>Tulyaganova</h3><p>Osiyo tennis federatsiyasi vitse-prezidenti, O‘zbekiston tennis federatsiyasi rais o‘rinbosari, sobiq WTA №16</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section section--lavender" id="roles">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <div><p class="eyebrow" data-i18n="rolesEyebrow">Одна система для всех</p><h2 class="display section-title" data-i18n="rolesTitle">ТРИ РОЛИ. ОДНА ИГРА.</h2></div>
-          <p class="section-lead" data-i18n="rolesLead">SQUAD соединяет тех, кто играет, тех, кто создаёт площадки, и тех, кто помогает становиться сильнее.</p>
-        </div>
-        <div class="roles">
-          <article class="role-card role-card--players" data-reveal><span class="role-number">01</span><span class="role-kicker" data-i18n="roleTagPlayers">PLAY</span><h3 data-i18n="players">Игрокам</h3><p data-i18n="playersP">Найдите матч по уровню, забронируйте корт, общайтесь с командой и собирайте свою историю игр.</p></article>
-          <article class="role-card role-card--venues" id="venues-section" data-reveal><span class="role-number">02</span><span class="role-kicker" data-i18n="roleTagVenues">HOST</span><h3 data-i18n="venues">Площадкам</h3><p data-i18n="venuesP">Управляйте расписанием, ценами, бронированиями и тренерами в одной панели.</p></article>
-          <article class="role-card role-card--coaches" id="coaches-section" data-reveal><span class="role-number">03</span><span class="role-kicker" data-i18n="roleTagCoaches">COACH</span><h3 data-i18n="coaches">Тренерам</h3><p data-i18n="coachesP">Принимайте записи через площадки‑партнёры, ведите расписание и показывайте свои услуги.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--deep" id="partners">
-      <div class="wrap partner-layout">
-        <div data-reveal><p class="eyebrow" data-i18n="partnerEyebrow">Партнёры SQUAD</p><h2 class="display partner-title" data-i18n="partnerTitle">ПЛОЩАДКИ<br>ДЛЯ ИГРЫ</h2><p class="stage-copy" data-i18n="partnerCopy">Itek Tennis Club · Ташкент</p></div>
-        <div class="partner-card" data-reveal="scale"><img src="/assets/itek-logo.jpg" alt="Itek Tennis Club"><span class="partner-caption" data-i18n="partnerLabel">Партнёр первой волны</span></div>
-      </div>
-    </section>
-
+    <!-- FAQ -->
     <section class="section" id="faq">
       <div class="wrap faq-grid">
-        <div data-reveal><p class="eyebrow" data-i18n="faqEyebrow">Коротко о главном</p><h2 class="display faq-title" data-i18n="faqTitle">ЕСТЬ ВОПРОСЫ?</h2></div>
+        <div data-reveal><p class="eyebrow">Asosiy savollar</p><h2 class="display h2">Savollar<br>bormi?</h2></div>
         <div class="faq-list" data-reveal>
-          <details><summary data-i18n="faq1">Как войти в приложение?</summary><div class="faq-answer" data-i18n="faq1p">По номеру телефона и SMS‑коду. Пароль не нужен.</div></details>
-          <details><summary data-i18n="faq2">Когда можно отменить бронь?</summary><div class="faq-answer" data-i18n="faq2p">Бесплатная отмена доступна не позднее чем за 12 часов до начала.</div></details>
-          <details><summary data-i18n="faq3">Как проходит оплата?</summary><div class="faq-answer" data-i18n="faq3p">Картой в приложении. Итоговая цена видна до оплаты.</div></details>
-          <details><summary data-i18n="faq4">Что означает уровень 0.0–7.0?</summary><div class="faq-answer" data-i18n="faq4p">Это шкала игрового уровня. Первые пять матчей помогают откалибровать ваш уровень.</div></details>
-          <details><summary data-i18n="faq5">Как стать тренером?</summary><div class="faq-answer" data-i18n="faq5p">Подайте заявку в приложении. После модерации профиль работает через площадки‑партнёры SQUAD.</div></details>
-          <details><summary data-i18n="faq6">Как удалить аккаунт?</summary><div class="faq-answer" data-i18n="faq6p">Откройте страницу удаления аккаунта или напишите на support@squadplayers.com.</div></details>
+          <details><summary>Ilova qachon App Store va Google Playda bo‘ladi?</summary><div class="faq-answer">iOS 1.0.7 versiyasi allaqachon TestFlightda. App Store va Google Playda ommaviy ishga tushirish — 2026-yilning to‘rtinchi choragida, avval Toshkentda.</div></details>
+          <details><summary>Qaysi sport turlari bor?</summary><div class="faq-answer">Padel va tennis. Futbolni 2027-yilda qo‘shamiz.</div></details>
+          <details><summary>Ilovaga qanday kiraman?</summary><div class="faq-answer">Telefon raqami va SMS-kod orqali. Parol kerak emas.</div></details>
+          <details><summary>To‘lov qanday amalga oshadi?</summary><div class="faq-answer">Ilovada karta orqali, 100% oldindan to‘lov. Kort narxi barcha o‘yinchilarga bo‘linadi — yoki bitta odam hamma uchun to‘laydi. Yakuniy narx to‘lovdan oldin ko‘rinadi.</div></details>
+          <details><summary>Bronni qachon bekor qilish mumkin?</summary><div class="faq-answer">Bepul bekor qilish — boshlanishidan kamida 12 soat oldin.</div></details>
+          <details><summary>0.0–7.0 darajasi nimani anglatadi?</summary><div class="faq-answer">Bu o‘yin darajasi shkalasi. Birinchi beshta o‘yin darajani kalibrovka qiladi, har o‘yindan keyin — hisob va raqiblarning o‘zaro bahosi.</div></details>
+          <details><summary>Klubni qanday ulash yoki murabbiy bo‘lish mumkin?</summary><div class="faq-answer">ceo@squadplayers.com manziliga yozing. Murabbiylar ilovada ariza topshiradi va SQUAD hamkor klublari orqali ishlaydi.</div></details>
         </div>
       </div>
     </section>
 
-    <section class="section cta" id="contact-cta">
-      <div class="wrap cta-inner" data-reveal="scale"><p class="eyebrow" data-i18n="ctaEyebrow">Первый матч уже близко</p><h2 class="display cta-title" data-i18n="ctaTitle">ИГРА НАЧИНАЕТСЯ ЗДЕСЬ</h2><p class="cta-copy" data-i18n="ctaCopy">SQUAD запускается в Ташкенте. Скоро увидимся на площадке.</p></div>
+    <!-- Final CTA -->
+    <section class="section cta" id="contact">
+      <div class="wrap cta-inner" data-reveal>
+        <h2 class="display cta-title">Kim bilan? Qayerda? Qachon?<br><span>SQUADda</span></h2>
+        <p class="cta-copy">2026-yilning to‘rtinchi choragida Toshkentda ishga tushamiz. Klublar, murabbiylar va hamkorlar — to‘g‘ridan-to‘g‘ri asoschiga yozing.</p>
+        <div class="contact-row">
+          <a class="contact-tile" href="mailto:ceo@squadplayers.com"><small>Klublar, murabbiylar, hamkorlar</small><b>ceo@squadplayers.com</b></a>
+          <a class="contact-tile" href="mailto:support@squadplayers.com"><small>Qo‘llab-quvvatlash</small><b>support@squadplayers.com</b></a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-top">
-        <div class="footer-brand"><a class="wordmark" href="/uz/index.html">SQUAD<span>.</span></a><p data-i18n="footerTag">Мобильное приложение и спортивная экосистема для Узбекистана.</p><div class="legal-data"><strong>SQUAD, MCHJ</strong><br>ИНН: 313301535<br>Istiqlolobod MFY, Eski Sariko‘l ko‘chasi, 8-uy<br><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div></div>
-        <div class="footer-links"><div><h3 data-i18n="footerMenu">Меню</h3><a href="#how" data-i18n="navHow">Как это работает</a><a href="#sports" data-i18n="navSports">Виды спорта</a><a href="#partners" data-i18n="navPartners">Партнёры</a><a href="/contacts.html" data-i18n="navContacts">Контакты</a></div><div><h3 data-i18n="footerLegal">Документы</h3><a data-legal-link="terms" href="/ru/terms.html">Пользовательское соглашение</a><a data-legal-link="privacy" href="/ru/privacy.html">Политика конфиденциальности</a><a data-legal-link="booking-rules" href="/ru/booking-rules.html">Правила бронирования</a><a data-legal-link="delete-account" href="/ru/delete-account.html" data-i18n="contactDelete">Удаление аккаунта</a></div></div>
+        <div class="footer-brand"><a class="wordmark" href="/uz/index.html">SQUAD<span>.</span></a><p>Padel va tennis: kort, darajangizdagi raqiblar va murabbiylar — bitta ilovada.</p><div class="legal-data"><strong>SQUAD, MCHJ</strong><br>STIR: 313301535<br>Istiqlolobod MFY, Eski Sariko‘l ko‘chasi, 8-uy</div></div>
+        <div class="footer-links">
+          <div><h3>Menyu</h3><a href="#how">Qanday ishlaydi</a><a href="#clubs">Klublarga</a><a href="#coaches">Murabbiylarga</a><a href="#team">Jamoa</a><a href="/uz/contacts.html">Qo‘llab-quvvatlash</a></div>
+          <div><h3>Hujjatlar</h3><a href="/uz/terms/">Foydalanuvchi shartnomasi</a><a href="/uz/privacy/">Maxfiylik siyosati</a><a href="/uz/booking-rules/">Bron qilish qoidalari</a><a href="/uz/delete-account/">Akkauntni o‘chirish</a></div>
+        </div>
       </div>
-      <div class="footer-bottom"><span>© <span data-year>2026</span> SQUAD, MCHJ</span><span data-i18n="footerContacts">Контакты</span><a href="mailto:support@squadplayers.com" data-i18n="footerContactLink">Поддержка</a></div>
+      <div class="footer-bottom"><span>© 2026 SQUAD, MCHJ</span><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div>
     </div>
   </footer>
-  <script src="/assets/app.js?v=20260925" defer></script>
+  <script src="/assets/app.js?v=20261010" defer></script>
 </body>
 </html>

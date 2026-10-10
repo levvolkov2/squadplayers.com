@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="{{lang}}" data-lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17171a">
+  <title>{{metaTitle}}</title>
+  <meta name="description" content="{{metaDescription}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:title" content="{{metaTitle}}">
+  <meta property="og:description" content="{{metaDescription}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="https://squadplayers.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://squadplayers.com/ru/index.html">
+  <link rel="alternate" hreflang="uz" href="https://squadplayers.com/uz/index.html">
+  <link rel="alternate" hreflang="en" href="https://squadplayers.com/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://squadplayers.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v={{version}}">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/{{lang}}/index.html" aria-label="SQUAD">SQUAD<span>.</span></a>
+      <nav class="main-nav" aria-label="{{navLabel}}">
+        <a href="#how">{{navHow}}</a>
+        <a href="#clubs">{{navClubs}}</a>
+        <a href="#coaches">{{navCoaches}}</a>
+        <a href="#team">{{navTeam}}</a>
+        <a href="#contact">{{navContacts}}</a>
+      </nav>
+      <div class="lang-switcher" aria-label="Language">
+        <a href="/ru/index.html" data-lang-link="ru"{{curRu}}>RU</a>
+        <a href="/uz/index.html" data-lang-link="uz"{{curUz}}>UZ</a>
+        <a href="/en/index.html" data-lang-link="en"{{curEn}}>EN</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="{{menuLabel}}"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status-pill"><i aria-hidden="true"></i>{{heroStatus}}</p>
+          <h1 class="display hero-title">{{heroTitle}}</h1>
+          <p class="hero-sub">{{heroSub}}</p>
+          <div class="hero-actions">
+            <a class="btn btn--lime" href="#how">{{heroCta}}</a>
+            <a class="btn btn--ghost" href="#clubs">{{heroCta2}}</a>
+          </div>
+          <p class="hero-place">{{heroPlace}}</p>
+        </div>
+        <figure class="device hero-device">
+          <img src="/assets/img/screen-home.jpg" width="460" height="998" alt="{{altHome}}" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>{{ticker}}</span><span>{{ticker}}</span>
+      </div>
+    </div>
+
+    <!-- Problem -->
+    <section class="section" id="problem">
+      <div class="wrap split">
+        <div data-reveal>
+          <p class="eyebrow"><b>01</b> {{problemEyebrow}}</p>
+          <h2 class="display h2">{{problemTitle}}</h2>
+          <ul class="pain-list">
+            <li><span>{{pain1a}}</span>{{pain1b}}</li>
+            <li><span>{{pain2a}}</span>{{pain2b}}</li>
+            <li><span>{{pain3a}}</span>{{pain3b}}</li>
+          </ul>
+        </div>
+        <div class="chat" data-reveal aria-label="{{chatLabel}}">
+          <div class="chat-head"><b>П</b><div><strong>{{chatTitle}}</strong><small>{{chatSub}}</small></div></div>
+          <p class="msg">{{chat1}}<time>18:42</time></p>
+          <p class="msg">{{chat2}}<time>18:51</time></p>
+          <p class="msg">{{chat3}}<time>18:55</time></p>
+          <p class="msg">{{chat4}}<time>19:06</time></p>
+          <p class="msg msg--fail">{{chat5}}<time>19:31</time></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section section--deep" id="how">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>02</b> {{solutionEyebrow}}</p>
+          <h2 class="display h2">{{solutionTitle}}</h2>
+        </div>
+        <div class="features">
+          <article class="feature" data-reveal><span class="feature-ix">01</span><h3>{{f1}}</h3><p>{{f1p}}</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">02</span><h3>{{f2}}</h3><p>{{f2p}}</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">03</span><h3>{{f3}}</h3><p>{{f3p}}</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">04</span><h3>{{f4}}</h3><p>{{f4p}}</p></article>
+        </div>
+        <div class="screens-head" data-reveal>
+          <p class="eyebrow eyebrow--lavender">{{screensEyebrow}}</p>
+          <p class="screens-hint">{{screensHint}}</p>
+        </div>
+        <div class="screens" tabindex="0" aria-label="{{screensEyebrow}}">
+          <figure class="device"><img src="/assets/img/screen-welcome.jpg" width="460" height="998" loading="lazy" alt="{{altWelcome}}"><figcaption>{{capWelcome}}</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-home.jpg" width="460" height="998" loading="lazy" alt="{{altHome}}"><figcaption>{{capHome}}</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-levels.jpg" width="460" height="998" loading="lazy" alt="{{altLevels}}"><figcaption>{{capLevels}}</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-profile.jpg" width="460" height="998" loading="lazy" alt="{{altProfile}}"><figcaption>{{capProfile}}</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-coach.jpg" width="460" height="997" loading="lazy" alt="{{altCoach}}"><figcaption>{{capCoach}}</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price -->
+    <section class="section section--lime" id="price">
+      <div class="wrap split split--center">
+        <div data-reveal>
+          <p class="eyebrow"><b>03</b> {{priceEyebrow}}</p>
+          <h2 class="display h2">{{priceTitle}}</h2>
+          <p class="lead">{{priceLead}}</p>
+        </div>
+        <div class="divide" data-reveal>
+          <div class="divide-total"><strong>500 000</strong><span>{{priceTotal}}</span></div>
+          <div class="divide-op">÷ 4</div>
+          <div class="divide-grid">
+            <div><b>A</b><strong>125 000</strong><span>{{pricePart}}</span></div>
+            <div><b>B</b><strong>125 000</strong><span>{{pricePart}}</span></div>
+            <div><b>C</b><strong>125 000</strong><span>{{pricePart}}</span></div>
+            <div><b>D</b><strong>125 000</strong><span>{{pricePart}}</span></div>
+          </div>
+          <ul class="divide-notes">
+            <li><b>{{priceNote1a}}</b> {{priceNote1b}}</li>
+            <li><b>{{priceNote2a}}</b> {{priceNote2b}}</li>
+            <li><b>{{priceNote3a}}</b> {{priceNote3b}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product proof -->
+    <section class="section" id="product">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>04</b> {{productEyebrow}}</p>
+          <h2 class="display h2">{{productTitle}}</h2>
+        </div>
+        <div class="stats">
+          <div class="stat" data-reveal><strong>40</strong><span>{{stat1}}</span></div>
+          <div class="stat" data-reveal><strong>13</strong><span>{{stat2}}</span></div>
+          <div class="stat" data-reveal><strong>1.0.7</strong><span>{{stat3}}</span></div>
+          <div class="stat stat--lime" data-reveal><strong>DUNS</strong><span>{{stat4}}</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaches -->
+    <section class="section section--deep" id="coaches">
+      <span class="anchor" id="coaches-section"></span>
+      <div class="wrap split split--center">
+        <div data-reveal>
+          <p class="eyebrow"><b>05</b> {{coachEyebrow}}</p>
+          <h2 class="display h2">{{coachTitle}}</h2>
+          <p class="lead">{{coachLead}}</p>
+          <div class="share">
+            <div><strong>10%</strong><span>{{coachShare1}}</span></div>
+            <div class="share--lime"><strong>5%</strong><span>{{coachShare2}}</span></div>
+          </div>
+        </div>
+        <div class="triangle" data-reveal aria-label="{{triLabel}}">
+          <div class="tri-node tri-node--players"><b>{{triPlayers}}</b><span>{{triPlayersP}}</span></div>
+          <div class="tri-node tri-node--clubs"><b>{{triClubs}}</b><span>{{triClubsP}}</span></div>
+          <div class="tri-node tri-node--coaches"><b>{{triCoaches}}</b><span>{{triCoachesP}}</span></div>
+          <div class="tri-core">SQUAD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clubs -->
+    <section class="section" id="clubs">
+      <span class="anchor" id="venues-section"></span>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>06</b> {{clubsEyebrow}}</p>
+          <h2 class="display h2">{{clubsTitle}}</h2>
+          <p class="lead">{{clubsLead}}</p>
+        </div>
+        <div class="day" data-reveal aria-label="{{dayLabel}}">
+          <div class="day-bars">
+            <i></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+          </div>
+          <div class="day-axis"><span>06</span><span>11</span><span>17</span><span>24</span></div>
+          <div class="day-legend"><span><i class="on"></i>{{dayBusy}}</span><span><i></i>{{dayEmpty}}</span><small>{{daySource}}</small></div>
+        </div>
+        <div class="club-grid">
+          <article class="club-card" data-reveal><h3>{{club1}}</h3><p>{{club1p}}</p></article>
+          <article class="club-card" data-reveal><h3>{{club2}}</h3><p>{{club2p}}</p></article>
+          <article class="club-card" data-reveal><h3>{{club3}}</h3><p>{{club3p}}</p></article>
+          <article class="club-card" data-reveal><h3>{{club4}}</h3><p>{{club4p}}</p></article>
+        </div>
+        <article class="decree" data-reveal>
+          <div class="decree-date"><strong>01.01</strong><span>2027</span></div>
+          <div>
+            <p class="eyebrow">{{decreeEyebrow}}</p>
+            <h3>{{decreeTitle}}</h3>
+            <p>{{decreeText}}</p>
+          </div>
+        </article>
+        <div class="club-cta" data-reveal>
+          <p>{{clubCtaText}}</p>
+          <a class="btn btn--lime" href="mailto:ceo@squadplayers.com?subject={{clubMailSubject}}">{{clubCta}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next -->
+    <section class="section section--deep" id="next">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>07</b> {{nextEyebrow}}</p>
+          <h2 class="display h2">{{nextTitle}}</h2>
+        </div>
+        <div class="next-grid">
+          <article class="next-card" data-reveal>
+            <div class="watch" aria-hidden="true">
+              <small>{{watchCourt}}</small>
+              <div class="watch-score"><span>{{watchUs}}</span><b>6 3</b><span>{{watchThem}}</span><b>4 2</b></div>
+              <strong>47:12</strong>
+              <em>{{watchLeft}}</em>
+            </div>
+            <div><span class="tag">2027</span><h3>{{next1}}</h3><p>{{next1p}}</p></div>
+          </article>
+          <article class="next-card" data-reveal>
+            <div class="cam" aria-hidden="true">
+              <small><i></i>REC · {{camCourt}}</small>
+              <span>AI · {{camHighlights}}</span>
+              <p>{{camMoment1}} · 0:47<br>{{camMoment2}} · 12:03</p>
+              <b>↗ Stories</b>
+            </div>
+            <div><span class="tag">2027</span><h3>{{next2}}</h3><p>{{next2p}}</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="section" id="community">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>08</b> {{commEyebrow}}</p>
+          <h2 class="display h2">{{commTitle}}</h2>
+        </div>
+        <div class="comm-grid">
+          <article class="comm-card comm-card--board" data-reveal>
+            <small>{{comm1k}}</small><h3>{{comm1}}</h3>
+            <ol class="board">
+              <li><span>#1</span>{{boardPlayer}} · 31<b>5.4</b></li>
+              <li><span>#2</span>{{boardPlayer}} · 27<b>5.1</b></li>
+              <li><span>#3</span>{{boardPlayer}} · 22<b>4.9</b></li>
+            </ol>
+            <p>{{comm1p}}</p>
+          </article>
+          <article class="comm-card" data-reveal><small>{{comm2k}}</small><h3>{{comm2}}</h3><p>{{comm2p}}</p></article>
+          <article class="comm-card" data-reveal><small>{{comm3k}}</small><h3>{{comm3}}</h3><p>{{comm3p}}</p></article>
+          <article class="comm-card" data-reveal><small>{{comm4k}}</small><h3>{{comm4}}</h3><p>{{comm4p}}</p></article>
+          <article class="comm-card" data-reveal><small>{{comm5k}}</small><h3>{{comm5}}</h3><p>{{comm5p}}</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market -->
+    <section class="section section--lavender" id="market">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>09</b> {{marketEyebrow}}</p>
+          <h2 class="display h2">{{marketTitle}}</h2>
+        </div>
+        <div class="market">
+          <div data-reveal><strong>{{m1}}</strong><p>{{m1p}}</p><small>{{m1s}}</small></div>
+          <div data-reveal><strong>52 417</strong><p>{{m2p}}</p><small>{{m2s}}</small></div>
+          <div data-reveal><strong>58 334</strong><p>{{m3p}}</p><small>Global Padel Report 2026</small></div>
+          <div data-reveal><strong>200–600</strong><p>{{m4p}}</p><small>Afisha.uz, 11.2025</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap + partner -->
+    <section class="section" id="roadmap">
+      <span class="anchor" id="partners"></span>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>10</b> {{roadEyebrow}}</p>
+          <h2 class="display h2">{{roadTitle}}</h2>
+        </div>
+        <ol class="road">
+          <li class="done" data-reveal><time>03.09.26</time><p>{{road1}}</p></li>
+          <li class="done" data-reveal><time>{{road2d}}</time><p>{{road2}}</p></li>
+          <li class="now" data-reveal><time>{{road3d}}</time><p>{{road3}}</p><span>{{roadNow}}</span></li>
+          <li data-reveal><time>Q4 2026</time><p>{{road4}}</p></li>
+          <li data-reveal><time>2027</time><p>{{road5}}</p></li>
+          <li data-reveal><time>2028</time><p>{{road6}}</p></li>
+        </ol>
+        <article class="partner" data-reveal>
+          <div class="partner-logo"><img src="/assets/itek-logo.jpg" width="450" height="300" loading="lazy" alt="Itek Tennis Club"></div>
+          <div>
+            <p class="eyebrow">{{partnerEyebrow}}</p>
+            <h3>Itek Tennis Club</h3>
+            <p>{{partnerText}}</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section section--deep" id="team">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>11</b> {{teamEyebrow}}</p>
+          <h2 class="display h2">{{teamTitle}}</h2>
+        </div>
+        <div class="team">
+          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="{{t1n}}"><small>{{t1r}}</small><h3>{{t1n}}</h3><p>{{t1p}}</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="{{t2n}}"><small>{{t2r}}</small><h3>{{t2n}}</h3><p>{{t2p}}</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="{{t3n}}"><small>{{t3r}}</small><h3>{{t3n}}</h3><p>{{t3p}}</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="{{t4n}}"><small>{{t4r}}</small><h3>{{t4n}}</h3><p>{{t4p}}</p></article>
+          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="{{t5n}}"><small>{{t5r}}</small><h3>{{t5n}}</h3><p>{{t5p}}</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq-grid">
+        <div data-reveal><p class="eyebrow">{{faqEyebrow}}</p><h2 class="display h2">{{faqTitle}}</h2></div>
+        <div class="faq-list" data-reveal>
+          <details><summary>{{q1}}</summary><div class="faq-answer">{{a1}}</div></details>
+          <details><summary>{{q2}}</summary><div class="faq-answer">{{a2}}</div></details>
+          <details><summary>{{q3}}</summary><div class="faq-answer">{{a3}}</div></details>
+          <details><summary>{{q4}}</summary><div class="faq-answer">{{a4}}</div></details>
+          <details><summary>{{q5}}</summary><div class="faq-answer">{{a5}}</div></details>
+          <details><summary>{{q6}}</summary><div class="faq-answer">{{a6}}</div></details>
+          <details><summary>{{q7}}</summary><div class="faq-answer">{{a7}}</div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section cta" id="contact">
+      <div class="wrap cta-inner" data-reveal>
+        <h2 class="display cta-title">{{ctaTitle}}</h2>
+        <p class="cta-copy">{{ctaCopy}}</p>
+        <div class="contact-row">
+          <a class="contact-tile" href="mailto:ceo@squadplayers.com"><small>{{ctaPartners}}</small><b>ceo@squadplayers.com</b></a>
+          <a class="contact-tile" href="mailto:support@squadplayers.com"><small>{{ctaSupport}}</small><b>support@squadplayers.com</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand"><a class="wordmark" href="/{{lang}}/index.html">SQUAD<span>.</span></a><p>{{footerTag}}</p><div class="legal-data"><strong>SQUAD, MCHJ</strong><br>{{tin}}: 313301535<br>Istiqlolobod MFY, Eski Sariko‘l ko‘chasi, 8-uy</div></div>
+        <div class="footer-links">
+          <div><h3>{{footerMenu}}</h3><a href="#how">{{navHow}}</a><a href="#clubs">{{navClubs}}</a><a href="#coaches">{{navCoaches}}</a><a href="#team">{{navTeam}}</a><a href="/{{lang}}/contacts.html">{{navSupport}}</a></div>
+          <div><h3>{{footerLegal}}</h3><a href="/{{lang}}/terms/">{{docTerms}}</a><a href="/{{lang}}/privacy/">{{docPrivacy}}</a><a href="/{{lang}}/booking-rules/">{{docBooking}}</a><a href="/{{lang}}/delete-account/">{{docDelete}}</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 SQUAD, MCHJ</span><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div>
+    </div>
+  </footer>
+  <script src="/assets/app.js?v={{version}}" defer></script>
+</body>
+</html>

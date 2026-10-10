@@ -2,180 +2,383 @@
 <html lang="ru" data-lang="ru">
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>SQUAD — Во что играем сегодня?</title>
-  <meta name="description" content="SQUAD объединяет игроков, площадки и тренеров: найдите игру, забронируйте корт и растите в рейтинге.">
-  <meta property="og:title" content="SQUAD — Во что играем сегодня?">
-  <meta property="og:description" content="Корт, матч, тренировка, чат и рейтинг — в одном приложении.">
+  <meta name="theme-color" content="#17171a">
+  <title>SQUAD — С кем? Где? Когда? Падел и теннис в Ташкенте</title>
+  <meta name="description" content="SQUAD — падел и теннис в одном приложении: корт без звонков, соперники по уровню 0.0–7.0, тренеры и оплата своей части. iOS 1.0.7 уже в TestFlight.">
+  <link rel="canonical" href="https://squadplayers.com/">
+  <meta property="og:title" content="SQUAD — С кем? Где? Когда? Падел и теннис в Ташкенте">
+  <meta property="og:description" content="SQUAD — падел и теннис в одном приложении: корт без звонков, соперники по уровню 0.0–7.0, тренеры и оплата своей части. iOS 1.0.7 уже в TestFlight.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/og.svg">
+  <meta property="og:url" content="https://squadplayers.com/">
+  <meta property="og:image" content="https://squadplayers.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="alternate" hreflang="ru" href="/ru/index.html">
-  <link rel="alternate" hreflang="uz" href="/uz/index.html">
-  <link rel="alternate" hreflang="en" href="/en/index.html">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260927">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://squadplayers.com/ru/index.html">
+  <link rel="alternate" hreflang="uz" href="https://squadplayers.com/uz/index.html">
+  <link rel="alternate" hreflang="en" href="https://squadplayers.com/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://squadplayers.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v=20261010">
 </head>
 <body data-page="home">
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="wordmark" href="/ru/index.html" aria-label="SQUAD">SQUAD<span>.</span></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#how" data-i18n="navHow">Как это работает</a>
-        <a href="#sports" data-i18n="navSports">Виды спорта</a>
-        <a href="#partners" data-i18n="navPartners">Партнёры</a>
-        <a href="#venues-section" data-i18n="navVenues">Площадкам</a>
-        <a href="#coaches-section" data-i18n="navCoaches">Тренерам</a>
-        <a href="/contacts.html" data-i18n="navContacts">Контакты</a>
+      <nav class="main-nav" aria-label="Меню">
+        <a href="#how">Как это работает</a>
+        <a href="#clubs">Клубам</a>
+        <a href="#coaches">Тренерам</a>
+        <a href="#team">Команда</a>
+        <a href="#contact">Контакты</a>
       </nav>
-      <div class="lang-switcher" aria-label="Language switcher">
+      <div class="lang-switcher" aria-label="Language">
         <a href="/ru/index.html" data-lang-link="ru" aria-current="page">RU</a>
         <a href="/uz/index.html" data-lang-link="uz">UZ</a>
         <a href="/en/index.html" data-lang-link="en">EN</a>
       </div>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span></button>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-court"><i></i><i></i><i></i><i></i></div>
-        <div class="hero-ball hero-ball--lime"></div><div class="hero-ball hero-ball--lav"></div>
-        <div class="hero-scan"></div><span class="hero-visual-label">PLAY / CONNECT / REPEAT</span>
-      </div>
+    <!-- Hero -->
+    <section class="hero" id="top">
       <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow" data-i18n="heroEyebrow">Спортивная экосистема Ташкента</p>
-          <h1 class="display hero-title"><span data-i18n="heroLine1">ВО ЧТО</span><br><span class="hero-title-accent" data-i18n="heroLine2">ИГРАЕМ</span><br><span data-i18n="heroLine3">СЕГОДНЯ?</span></h1>
-          <p class="hero-sub" data-i18n="heroCopy">Бронируйте корты, находите игроков своего уровня и тренируйтесь с тренерами — в одном приложении.</p>
-          <div class="hero-meta">
-            <a class="btn btn--lime" href="#how" data-i18n="heroButton">Смотреть, как это работает</a>
-            <small data-i18n="heroSoon">iOS и Android · скоро</small>
+        <div class="hero-copy">
+          <p class="status-pill"><i aria-hidden="true"></i>iOS 1.0.7 · уже в TestFlight</p>
+          <h1 class="display hero-title">С КЕМ?<br><span class="accent">ГДЕ?</span><br>КОГДА?</h1>
+          <p class="hero-sub">Падел и теннис: корт, соперники по уровню и тренеры — в одном приложении.</p>
+          <div class="hero-actions">
+            <a class="btn btn--lime" href="#how">Как это работает</a>
+            <a class="btn btn--ghost" href="#clubs">Клубам и тренерам</a>
           </div>
+          <p class="hero-place">Ташкент · запуск Q4 2026</p>
         </div>
-        <div class="hero-scroll"><span data-i18n="heroPlace">Ташкент · RU / UZ / EN</span></div>
+        <figure class="device hero-device">
+          <img src="/assets/img/screen-home.jpg" width="460" height="998" alt="Главный экран приложения SQUAD" fetchpriority="high">
+        </figure>
       </div>
     </section>
 
-    <section class="section section--lime">
-      <span class="slash-word" aria-hidden="true">PLAY</span>
-      <div class="wrap intro-panel">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Падел · Теннис · Матчи по уровню · Тренеры · AI-хайлайты · </span><span>Падел · Теннис · Матчи по уровню · Тренеры · AI-хайлайты · </span>
+      </div>
+    </div>
+
+    <!-- Problem -->
+    <section class="section" id="problem">
+      <div class="wrap split">
         <div data-reveal>
-          <p class="eyebrow" data-i18n="introEyebrow">Никаких пустых чатов</p>
-          <h2 class="display intro-title" data-i18n="introTitle">Больше игры. Меньше поиска.</h2>
+          <p class="eyebrow"><b>01</b> Проблема игрока</p>
+          <h2 class="display h2">Сыграть —<br>это квест</h2>
+          <ul class="pain-list">
+            <li><span>Корт</span>по звонкам: «есть только 22:30»</li>
+            <li><span>Соперник</span>своего уровня — по Telegram-чатам</li>
+            <li><span>Деньги</span>внёс 500 000 — потом неделю собираешь с друзей</li>
+          </ul>
         </div>
-        <p class="intro-copy" data-reveal="scale" data-i18n="introCopy">SQUAD собирает всё вокруг матча: корт, соперников, тренировку, чат и рейтинг. Вы выбираете спорт — мы помогаем начать.</p>
+        <div class="chat" data-reveal aria-label="Пример группового чата">
+          <div class="chat-head"><b>П</b><div><strong>Падел · ищем игру</strong><small>групповой чат</small></div></div>
+          <p class="msg">Есть корт сегодня на 19:00?<time>18:42</time></p>
+          <p class="msg">Обзвонил три клуба — только 22:30<time>18:51</time></p>
+          <p class="msg">Нужен четвёртый, уровень ~3<time>18:55</time></p>
+          <p class="msg">Я внёс за корт 500 000, скиньте по 125<time>19:06</time></p>
+          <p class="msg msg--fail">Всё, отбой. Переносим на следующую неделю<time>19:31</time></p>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="how">
+    <!-- Solution -->
+    <section class="section section--deep" id="how">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <div><p class="eyebrow" data-i18n="howEyebrow">Сценарий на четыре шага</p><h2 class="display section-title" data-i18n="howTitle">ИГРА НАЧИНАЕТСЯ С ОДНОГО ТАПА</h2></div>
-          <p class="section-lead" data-i18n="howLead">От первого поиска до нового места в рейтинге — всё происходит в приложении.</p>
+          <p class="eyebrow"><b>02</b> Решение</p>
+          <h2 class="display h2">Вся игра —<br>в одном приложении</h2>
         </div>
-        <div class="steps">
-          <article class="step" data-reveal><span class="step-index">01</span><h3 data-i18n="step1">Выберите спорт</h3><p data-i18n="step1p">Падел, теннис или футбол / футзал — найдите свой ритм.</p></article>
-          <article class="step" data-reveal><span class="step-index">02</span><h3 data-i18n="step2">Найдите игру</h3><p data-i18n="step2p">Выберите корт или открытый матч подходящего уровня.</p></article>
-          <article class="step" data-reveal><span class="step-index">03</span><h3 data-i18n="step3">Оплатите в приложении</h3><p data-i18n="step3p">100% предоплата. Итоговая цена видна до оплаты.</p></article>
-          <article class="step" data-reveal><span class="step-index">04</span><h3 data-i18n="step4">Играйте и растите</h3><p data-i18n="step4p">Введите счёт, общайтесь в чате и поднимайтесь в рейтинге.</p></article>
+        <div class="features">
+          <article class="feature" data-reveal><span class="feature-ix">01</span><h3>Корт без звонков</h3><p>Моментальная бронь со 100% предоплатой — клуб видит живые деньги, а не «воздух».</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">02</span><h3>Матч по уровню</h3><p>Шкала 0.0–7.0 и калибровка за 5 матчей — играешь с равными.</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">03</span><h3>Каждый платит своё</h3><p>Стоимость делится на всех — или один платит за всех: пара, друзья, корпоратив.</p></article>
+          <article class="feature" data-reveal><span class="feature-ix">04</span><h3>Тренер в пару тапов</h3><p>Профиль, расписание, запись и оплата тренировки.</p></article>
+        </div>
+        <div class="screens-head" data-reveal>
+          <p class="eyebrow eyebrow--lavender">Реальные экраны сборки 1.0.7</p>
+          <p class="screens-hint">Листайте →</p>
+        </div>
+        <div class="screens" tabindex="0" aria-label="Реальные экраны сборки 1.0.7">
+          <figure class="device"><img src="/assets/img/screen-welcome.jpg" width="460" height="998" loading="lazy" alt="Стартовый экран SQUAD"><figcaption>Старт</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-home.jpg" width="460" height="998" loading="lazy" alt="Главный экран приложения SQUAD"><figcaption>Главная</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-levels.jpg" width="460" height="998" loading="lazy" alt="Экран начальных уровней игрока"><figcaption>Уровни</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-profile.jpg" width="460" height="998" loading="lazy" alt="Профиль игрока с уровнем"><figcaption>Профиль</figcaption></figure>
+          <figure class="device"><img src="/assets/img/screen-coach.jpg" width="460" height="997" loading="lazy" alt="Расписание тренера в SQUAD"><figcaption>Кабинет тренера</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="section section--deep" id="app">
-      <div class="wrap app-stage">
+    <!-- Price -->
+    <section class="section section--lime" id="price">
+      <div class="wrap split split--center">
         <div data-reveal>
-          <p class="eyebrow" data-i18n="appEyebrow">Ваш следующий матч</p>
-          <h2 class="display stage-title" data-i18n="appTitle">ПРИЛОЖЕНИЕ, КОТОРОЕ ДЕРЖИТ ИГРУ В ДВИЖЕНИИ</h2>
-          <p class="stage-copy" data-i18n="appCopy">Открытые матчи, корт рядом, игроки вашего уровня и тренировки через площадки‑партнёры SQUAD.</p>
+          <p class="eyebrow"><b>03</b> Доступность</p>
+          <h2 class="display h2">Падел за 125 000<br>вместо 500 000</h2>
+          <p class="lead">Вечерний падел на 90 минут стоит 500 000 сум. В SQUAD каждый платит свою часть — элитный спорт становится доступным.</p>
         </div>
-        <div class="phone-wrap" data-reveal="scale" aria-label="SQUAD app preview">
-          <div class="phone-glow" aria-hidden="true"></div>
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="phone-top"><span>12:52</span><span>● ● ●</span></div>
-              <div class="avatar">C</div>
-              <p class="phone-hello" data-i18n="phoneHello">Добрый день, Client</p>
-              <h3 class="phone-heading" data-i18n="phoneHeading">Во что играем сегодня?</h3>
-              <div class="sport-tabs"><span data-i18n="phonePadel">ПАДЕЛ</span><span data-i18n="phoneTennis">ТЕННИС</span><span data-i18n="phoneFootball">ФУТБОЛ</span></div>
-              <div class="phone-card"><span class="phone-date" data-i18n="phoneDate">ПН, 21 СЕНТ. · 18:00</span><h4 data-i18n="phoneMatch">Открытый матч</h4><p data-i18n="phoneMatchMeta">Sports Club · padel court · осталось мест: 1</p><div class="phone-progress"></div></div>
-              <div class="phone-card phone-card--dark"><h4 data-i18n="phoneCourts">Ближайшее время на кортах</h4><p data-i18n="phoneCourt1">18:00 · Падел · Tashkent</p><p style="margin-top: 8px" data-i18n="phoneCourt2">18:30 · Теннис · Tashkent</p></div>
-              <div class="phone-card phone-card--dark"><h4 data-i18n="phoneRating">Ваш рейтинг</h4><p data-i18n="phoneRatingMeta">0.0–7.0 · TASHKENT</p></div>
-              <div class="phone-nav"><span>⌂</span><span>ϟ</span><span class="plus">+</span><span>◌</span><span>♙</span></div>
+        <div class="divide" data-reveal>
+          <div class="divide-total"><strong>500 000</strong><span>корт на 90 минут вечером · Padel.uz</span></div>
+          <div class="divide-op">÷ 4</div>
+          <div class="divide-grid">
+            <div><b>A</b><strong>125 000</strong><span>своя часть</span></div>
+            <div><b>B</b><strong>125 000</strong><span>своя часть</span></div>
+            <div><b>C</b><strong>125 000</strong><span>своя часть</span></div>
+            <div><b>D</b><strong>125 000</strong><span>своя часть</span></div>
+          </div>
+          <ul class="divide-notes">
+            <li><b>Без долгов —</b> каждый платит сам, сразу в приложении</li>
+            <li><b>Один за всех —</b> пара, друзья или корпоратив одной оплатой</li>
+            <li><b>Без абонемента</b> и лимита визитов: платишь только за игру</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product proof -->
+    <section class="section" id="product">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>04</b> Продукт</p>
+          <h2 class="display h2">Это не идея.<br>Это уже приложение</h2>
+        </div>
+        <div class="stats">
+          <div class="stat" data-reveal><strong>40</strong><span>экранов в мобильном приложении</span></div>
+          <div class="stat" data-reveal><strong>13</strong><span>разделов в панели управления</span></div>
+          <div class="stat" data-reveal><strong>1.0.7</strong><span>версия iOS в TestFlight</span></div>
+          <div class="stat stat--lime" data-reveal><strong>DUNS</strong><span>получен — ждём App Store и Google Play</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaches -->
+    <section class="section section--deep" id="coaches">
+      <span class="anchor" id="coaches-section"></span>
+      <div class="wrap split split--center">
+        <div data-reveal>
+          <p class="eyebrow"><b>05</b> Главное отличие</p>
+          <h2 class="display h2">Тренер — третья<br>сторона рынка</h2>
+          <p class="lead">Тренер получает учеников, расписание и оплату. Клуб — долю с денег, которые раньше шли мимо кассы.</p>
+          <div class="share">
+            <div><strong>10%</strong><span>SQUAD с тренировки</span></div>
+            <div class="share--lime"><strong>5%</strong><span>клубу — повод самому приводить тренеров</span></div>
+          </div>
+        </div>
+        <div class="triangle" data-reveal aria-label="Игроки, клубы и тренеры в SQUAD">
+          <div class="tri-node tri-node--players"><b>Игроки</b><span>матчи и прогресс</span></div>
+          <div class="tri-node tri-node--clubs"><b>Клубы</b><span>брони и загрузка</span></div>
+          <div class="tri-node tri-node--coaches"><b>Тренеры</b><span>ученики и оплата</span></div>
+          <div class="tri-core">SQUAD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clubs -->
+    <section class="section" id="clubs">
+      <span class="anchor" id="venues-section"></span>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>06</b> Клубам</p>
+          <h2 class="display h2">Пустой час корта —<br><span class="accent">минус 380 000 сум</span></h2>
+          <p class="lead">Столько в среднем стоит час на девяти падел-кортах Ташкента. Днём корты простаивают, а бронь по телефону — это «воздух».</p>
+        </div>
+        <div class="day" data-reveal aria-label="Загрузка одного корта в будний день">
+          <div class="day-bars">
+            <i></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+          </div>
+          <div class="day-axis"><span>06</span><span>11</span><span>17</span><span>24</span></div>
+          <div class="day-legend"><span><i class="on"></i>занято</span><span><i></i>пусто</span><small>Загрузка корта в будний день · средние цены 9 падел-кортов Ташкента (Afisha.uz, 11.2025)</small></div>
+        </div>
+        <div class="club-grid">
+          <article class="club-card" data-reveal><h3>Живые деньги</h3><p>100% предоплата при бронировании — никаких «позвонили и не пришли».</p></article>
+          <article class="club-card" data-reveal><h3>Дневные часы</h3><p>Игроки находят соперников и на дневное время, а не только на 19:00.</p></article>
+          <article class="club-card" data-reveal><h3>Тренеры в кассе</h3><p>Тренировки на ваших кортах идут через SQUAD — клуб получает 5% с каждой.</p></article>
+          <article class="club-card" data-reveal><h3>Панель управления</h3><p>Цены, расписание, брони, тренеры и выручка — в одном месте.</p></article>
+        </div>
+        <article class="decree" data-reveal>
+          <div class="decree-date"><strong>01.01</strong><span>2027</span></div>
+          <div>
+            <p class="eyebrow">Почему сейчас · ПП-347 от 21.09.2026</p>
+            <h3>Государственные теннисные корты переходят на самофинансирование</h3>
+            <p>С 1 января 2027 года корты сами устанавливают цены на платные услуги — им нужен инструмент продаж. SQUAD даёт его уже сегодня: бронь, оплата и игроки с первого дня.</p>
+          </div>
+        </article>
+        <div class="club-cta" data-reveal>
+          <p>Партнёрам первой волны — первый месяц бесплатно.</p>
+          <a class="btn btn--lime" href="mailto:ceo@squadplayers.com?subject=Подключение%20клуба%20к%20SQUAD">Подключить клуб</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next -->
+    <section class="section section--deep" id="next">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>07</b> Следующий шаг</p>
+          <h2 class="display h2">Часы и AI-камеры<br>на каждом корте</h2>
+        </div>
+        <div class="next-grid">
+          <article class="next-card" data-reveal>
+            <div class="watch" aria-hidden="true">
+              <small>Падел · корт 2</small>
+              <div class="watch-score"><span>Мы</span><b>6 3</b><span>Они</span><b>4 2</b></div>
+              <strong>47:12</strong>
+              <em>Осталось 13 мин</em>
             </div>
+            <div><span class="tag">2027</span><h3>SQUAD на Apple Watch</h3><p>Счёт и таймер на руке. Сигнал «время вышло» — клуб держит расписание без задержек.</p></div>
+          </article>
+          <article class="next-card" data-reveal>
+            <div class="cam" aria-hidden="true">
+              <small><i></i>REC · КОРТ 2</small>
+              <span>AI · ХАЙЛАЙТЫ</span>
+              <p>Смэш · 0:47<br>Эйс · 12:03</p>
+              <b>↗ Stories</b>
+            </div>
+            <div><span class="tag">2027</span><h3>AI-камеры за наш счёт</h3><p>Лучшие моменты сами режутся и улетают в Instagram Stories. Тренеру — разбор ошибок ученика.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section class="section" id="community">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>08</b> Комьюнити</p>
+          <h2 class="display h2">Игроки приводят<br>игроков</h2>
+        </div>
+        <div class="comm-grid">
+          <article class="comm-card comm-card--board" data-reveal>
+            <small>Рейтинг города</small><h3>Очки за каждый матч</h3>
+            <ol class="board">
+              <li><span>#1</span>Игрок · 31<b>5.4</b></li>
+              <li><span>#2</span>Игрок · 27<b>5.1</b></li>
+              <li><span>#3</span>Игрок · 22<b>4.9</b></li>
+            </ol>
+            <p>Лидерборды по городам и топ-хайлайт месяца.</p>
+          </article>
+          <article class="comm-card" data-reveal><small>Блогеры</small><h3>«Сыграй со мной»</h3><p>Карточка блогера, шоу-матчи и игра с фанатами.</p></article>
+          <article class="comm-card" data-reveal><small>Звёздные слоты</small><h3>Аукцион тренировок</h3><p>Топ-тренеры и игроки, ограниченные места.</p></article>
+          <article class="comm-card" data-reveal><small>Бренды</small><h3>Турниры с брендами</h3><p>Тематические ивенты к запуску коллекций спортивных брендов.</p></article>
+          <article class="comm-card" data-reveal><small>Реклама</small><h3>Реклама в приложении</h3><p>Для брендов, которым нужны спортсмены-любители: спортмагазины, инвентарь и не только.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market -->
+    <section class="section section--lavender" id="market">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>09</b> Рынок</p>
+          <h2 class="display h2">Узбекистан уже<br>платит за спорт</h2>
+        </div>
+        <div class="market">
+          <div data-reveal><strong>7,09 млн</strong><p>человек в Узбекистане регулярно занимаются спортом</p><small>stat.uz · Нацкомстат, 2024</small></div>
+          <div data-reveal><strong>52 417</strong><p>спортивных сооружений — и почти все бронируются по телефону</p><small>stat.uz · Госкомстат, 2022</small></div>
+          <div data-reveal><strong>58 334</strong><p>падел-корта в мире, +16% за 2025</p><small>Global Padel Report 2026</small></div>
+          <div data-reveal><strong>200–600</strong><p>тыс. сум — час падела в Ташкенте</p><small>Afisha.uz, 11.2025</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap + partner -->
+    <section class="section" id="roadmap">
+      <span class="anchor" id="partners"></span>
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><b>10</b> Где мы сейчас</p>
+          <h2 class="display h2">Продукт готов —<br>идём на запуск</h2>
+        </div>
+        <ol class="road">
+          <li class="done" data-reveal><time>03.09.26</time><p>ООО SQUAD зарегистрировано</p></li>
+          <li class="done" data-reveal><time>Сен 2026</time><p>40 экранов, кабинет тренера, панель управления</p></li>
+          <li class="now" data-reveal><time>Окт 2026</time><p>iOS 1.0.7 в TestFlight, DUNS получен</p><span>Мы здесь</span></li>
+          <li data-reveal><time>Q4 2026</time><p>App Store и Google Play: падел и теннис в Ташкенте</p></li>
+          <li data-reveal><time>2027</time><p>Apple Watch, AI-камеры, футбол, блогеры</p></li>
+          <li data-reveal><time>2028</time><p>Весь Узбекистан и своя медиалига</p></li>
+        </ol>
+        <article class="partner" data-reveal>
+          <div class="partner-logo"><img src="/assets/itek-logo.jpg" width="450" height="300" loading="lazy" alt="Itek Tennis Club"></div>
+          <div>
+            <p class="eyebrow">Партнёр первой волны</p>
+            <h3>Itek Tennis Club</h3>
+            <p>2 филиала в Ташкенте и 200+ активных резидентов клуба.</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="sports">
+    <!-- Team -->
+    <section class="section section--deep" id="team">
       <div class="wrap">
         <div class="section-head" data-reveal>
-          <div><p class="eyebrow" data-i18n="sportsEyebrow">Выберите свой темп</p><h2 class="display section-title" data-i18n="sportsTitle">ИГРАЕМ ВМЕСТЕ</h2></div>
-          <p class="section-lead" data-i18n="sportsLead">Первые виды спорта уже внутри. Остальные подключаем по мере роста комьюнити.</p>
+          <p class="eyebrow"><b>11</b> Команда</p>
+          <h2 class="display h2">Кто делает<br><span class="accent">SQUAD</span></h2>
         </div>
-        <div class="sports-grid">
-          <article class="sport-card" data-word="ПАДЕЛ" data-reveal><small>01 / active</small><h3 data-i18n="padel">Падел</h3></article>
-          <article class="sport-card" data-word="ТЕННИС" data-reveal><small>02 / active</small><h3 data-i18n="tennis">Теннис</h3></article>
-          <article class="sport-card sport-card--soon" data-word="FOOTBALL" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>03 / coming soon</small><h3 data-i18n="football">Футбол / футзал</h3></article>
-          <article class="sport-card" data-word="BASKET" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>04</small><h3 data-i18n="basketball">Баскетбол</h3></article>
-          <article class="sport-card" data-word="VOLLEY" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>05</small><h3 data-i18n="volleyball">Волейбол</h3></article>
-          <article class="sport-card" data-word="BADMINTON" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>06</small><h3 data-i18n="badminton">Бадминтон</h3></article>
-          <article class="sport-card" data-word="PING PONG" data-reveal><span class="soon" data-i18n="soon">Скоро</span><small>07</small><h3 data-i18n="tableTennis">Настольный теннис</h3></article>
+        <div class="team">
+          <article class="mate" data-reveal><img src="/assets/img/team-lev.jpg" width="360" height="360" loading="lazy" alt="Лев<br>Волков"><small>CEO · основатель</small><h3>Лев<br>Волков</h3><p>KEY Investments, Берлин, 2023–2026: девелопмент инвестпроектов</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-ivan.jpg" width="360" height="360" loading="lazy" alt="Иван<br>Глухарев"><small>COO</small><h3>Иван<br>Глухарев</h3><p>KEY Investments, Берлин, 2023–2026: сопровождение инвестпроектов</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-alexander.jpg" width="360" height="360" loading="lazy" alt="Александр<br>Городный"><small>CMO · маркетинг</small><h3>Александр<br>Городный</h3><p>Основатель Work-O: 10+ млрд рекламных показов, связи с Sofascore, Flashscore, LiveScore</p></article>
+          <article class="mate" data-reveal><img src="/assets/img/team-chris.jpg" width="360" height="360" loading="lazy" alt="Крис<br>Сантанджело"><small>CTO · разработка</small><h3>Крис<br>Сантанджело</h3><p>Morrowform Studios, США: приложение, бэкенд и панель управления</p></article>
+          <article class="mate mate--lime" data-reveal><img src="/assets/img/team-iroda.jpg" width="360" height="360" loading="lazy" alt="Ирода<br>Туляганова"><small>Эдвайзер</small><h3>Ирода<br>Туляганова</h3><p>Вице-президент Азиатской теннисной федерации, зампред Федерации тенниса Узбекистана, экс-№16 WTA</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section section--lavender" id="roles">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <div><p class="eyebrow" data-i18n="rolesEyebrow">Одна система для всех</p><h2 class="display section-title" data-i18n="rolesTitle">ТРИ РОЛИ. ОДНА ИГРА.</h2></div>
-          <p class="section-lead" data-i18n="rolesLead">SQUAD соединяет тех, кто играет, тех, кто создаёт площадки, и тех, кто помогает становиться сильнее.</p>
-        </div>
-        <div class="roles">
-          <article class="role-card role-card--players" data-reveal><span class="role-number">01</span><span class="role-kicker" data-i18n="roleTagPlayers">PLAY</span><h3 data-i18n="players">Игрокам</h3><p data-i18n="playersP">Найдите матч по уровню, забронируйте корт, общайтесь с командой и собирайте свою историю игр.</p></article>
-          <article class="role-card role-card--venues" id="venues-section" data-reveal><span class="role-number">02</span><span class="role-kicker" data-i18n="roleTagVenues">HOST</span><h3 data-i18n="venues">Площадкам</h3><p data-i18n="venuesP">Управляйте расписанием, ценами, бронированиями и тренерами в одной панели.</p></article>
-          <article class="role-card role-card--coaches" id="coaches-section" data-reveal><span class="role-number">03</span><span class="role-kicker" data-i18n="roleTagCoaches">COACH</span><h3 data-i18n="coaches">Тренерам</h3><p data-i18n="coachesP">Принимайте записи через площадки‑партнёры, ведите расписание и показывайте свои услуги.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--deep" id="partners">
-      <div class="wrap partner-layout">
-        <div data-reveal><p class="eyebrow" data-i18n="partnerEyebrow">Партнёры SQUAD</p><h2 class="display partner-title" data-i18n="partnerTitle">ПЛОЩАДКИ<br>ДЛЯ ИГРЫ</h2><p class="stage-copy" data-i18n="partnerCopy">Itek Tennis Club · Ташкент</p></div>
-        <div class="partner-card" data-reveal="scale"><img src="/assets/itek-logo.jpg" alt="Itek Tennis Club"><span class="partner-caption" data-i18n="partnerLabel">Партнёр первой волны</span></div>
-      </div>
-    </section>
-
+    <!-- FAQ -->
     <section class="section" id="faq">
       <div class="wrap faq-grid">
-        <div data-reveal><p class="eyebrow" data-i18n="faqEyebrow">Коротко о главном</p><h2 class="display faq-title" data-i18n="faqTitle">ЕСТЬ ВОПРОСЫ?</h2></div>
+        <div data-reveal><p class="eyebrow">Коротко о главном</p><h2 class="display h2">Есть<br>вопросы?</h2></div>
         <div class="faq-list" data-reveal>
-          <details><summary data-i18n="faq1">Как войти в приложение?</summary><div class="faq-answer" data-i18n="faq1p">По номеру телефона и SMS‑коду. Пароль не нужен.</div></details>
-          <details><summary data-i18n="faq2">Когда можно отменить бронь?</summary><div class="faq-answer" data-i18n="faq2p">Бесплатная отмена доступна не позднее чем за 12 часов до начала.</div></details>
-          <details><summary data-i18n="faq3">Как проходит оплата?</summary><div class="faq-answer" data-i18n="faq3p">Картой в приложении. Итоговая цена видна до оплаты.</div></details>
-          <details><summary data-i18n="faq4">Что означает уровень 0.0–7.0?</summary><div class="faq-answer" data-i18n="faq4p">Это шкала игрового уровня. Первые пять матчей помогают откалибровать ваш уровень.</div></details>
-          <details><summary data-i18n="faq5">Как стать тренером?</summary><div class="faq-answer" data-i18n="faq5p">Подайте заявку в приложении. После модерации профиль работает через площадки‑партнёры SQUAD.</div></details>
-          <details><summary data-i18n="faq6">Как удалить аккаунт?</summary><div class="faq-answer" data-i18n="faq6p">Откройте страницу удаления аккаунта или напишите на support@squadplayers.com.</div></details>
+          <details><summary>Когда приложение будет в App Store и Google Play?</summary><div class="faq-answer">Версия iOS 1.0.7 уже в TestFlight. Публичный запуск в App Store и Google Play — в четвёртом квартале 2026 года, сначала в Ташкенте.</div></details>
+          <details><summary>Какие виды спорта есть?</summary><div class="faq-answer">Падел и теннис. Футбол подключаем в 2027 году.</div></details>
+          <details><summary>Как войти в приложение?</summary><div class="faq-answer">По номеру телефона и SMS-коду. Пароль не нужен.</div></details>
+          <details><summary>Как проходит оплата?</summary><div class="faq-answer">Картой в приложении, 100% предоплата. Стоимость корта делится на всех игроков — или один платит за всех. Итоговая цена видна до оплаты.</div></details>
+          <details><summary>Когда можно отменить бронь?</summary><div class="faq-answer">Бесплатная отмена — не позднее чем за 12 часов до начала.</div></details>
+          <details><summary>Что означает уровень 0.0–7.0?</summary><div class="faq-answer">Это шкала игрового уровня. Первые пять матчей калибруют уровень, после каждой игры — счёт и взаимная оценка соперников.</div></details>
+          <details><summary>Как подключить клуб или стать тренером?</summary><div class="faq-answer">Напишите на ceo@squadplayers.com. Тренеры подают заявку в приложении и работают через клубы-партнёры SQUAD.</div></details>
         </div>
       </div>
     </section>
 
-    <section class="section cta" id="contact-cta">
-      <div class="wrap cta-inner" data-reveal="scale"><p class="eyebrow" data-i18n="ctaEyebrow">Первый матч уже близко</p><h2 class="display cta-title" data-i18n="ctaTitle">ИГРА НАЧИНАЕТСЯ ЗДЕСЬ</h2><p class="cta-copy" data-i18n="ctaCopy">SQUAD запускается в Ташкенте. Скоро увидимся на площадке.</p></div>
+    <!-- Final CTA -->
+    <section class="section cta" id="contact">
+      <div class="wrap cta-inner" data-reveal>
+        <h2 class="display cta-title">С кем? Где? Когда?<br><span>В SQUAD</span></h2>
+        <p class="cta-copy">Запускаемся в Ташкенте в четвёртом квартале 2026. Клубам, тренерам и партнёрам — пишите напрямую основателю.</p>
+        <div class="contact-row">
+          <a class="contact-tile" href="mailto:ceo@squadplayers.com"><small>Клубы, тренеры, партнёры</small><b>ceo@squadplayers.com</b></a>
+          <a class="contact-tile" href="mailto:support@squadplayers.com"><small>Поддержка</small><b>support@squadplayers.com</b></a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-top">
-        <div class="footer-brand"><a class="wordmark" href="/ru/index.html">SQUAD<span>.</span></a><p data-i18n="footerTag">Мобильное приложение и спортивная экосистема для Узбекистана.</p><div class="legal-data"><strong>SQUAD, MCHJ</strong><br>ИНН: 313301535<br>Istiqlolobod MFY, Eski Sariko‘l ko‘chasi, 8-uy<br><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div></div>
-        <div class="footer-links"><div><h3 data-i18n="footerMenu">Меню</h3><a href="#how" data-i18n="navHow">Как это работает</a><a href="#sports" data-i18n="navSports">Виды спорта</a><a href="#partners" data-i18n="navPartners">Партнёры</a><a href="/contacts.html" data-i18n="navContacts">Контакты</a></div><div><h3 data-i18n="footerLegal">Документы</h3><a data-legal-link="terms" href="/ru/terms.html">Пользовательское соглашение</a><a data-legal-link="privacy" href="/ru/privacy.html">Политика конфиденциальности</a><a data-legal-link="booking-rules" href="/ru/booking-rules.html">Правила бронирования</a><a data-legal-link="delete-account" href="/ru/delete-account.html" data-i18n="contactDelete">Удаление аккаунта</a></div></div>
+        <div class="footer-brand"><a class="wordmark" href="/ru/index.html">SQUAD<span>.</span></a><p>Падел и теннис: корт, соперники по уровню и тренеры — в одном приложении.</p><div class="legal-data"><strong>SQUAD, MCHJ</strong><br>ИНН: 313301535<br>Istiqlolobod MFY, Eski Sariko‘l ko‘chasi, 8-uy</div></div>
+        <div class="footer-links">
+          <div><h3>Меню</h3><a href="#how">Как это работает</a><a href="#clubs">Клубам</a><a href="#coaches">Тренерам</a><a href="#team">Команда</a><a href="/ru/contacts.html">Поддержка</a></div>
+          <div><h3>Документы</h3><a href="/ru/terms/">Пользовательское соглашение</a><a href="/ru/privacy/">Политика конфиденциальности</a><a href="/ru/booking-rules/">Правила бронирования</a><a href="/ru/delete-account/">Удаление аккаунта</a></div>
+        </div>
       </div>
-      <div class="footer-bottom"><span>© <span data-year>2026</span> SQUAD, MCHJ</span><span data-i18n="footerContacts">Контакты</span><a href="mailto:support@squadplayers.com" data-i18n="footerContactLink">Поддержка</a></div>
+      <div class="footer-bottom"><span>© 2026 SQUAD, MCHJ</span><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div>
     </div>
   </footer>
-  <script src="/assets/app.js?v=20260925" defer></script>
+  <script src="/assets/app.js?v=20261010" defer></script>
 </body>
 </html>
