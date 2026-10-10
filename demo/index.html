@@ -9,12 +9,16 @@
   <meta name="description" content="Демонстрационное видео SQUAD: живая сборка iOS 1.0.7 из TestFlight — главная, поиск игры, создание матча с оплатой своей части, профиль и рейтинг.">
   <link rel="canonical" href="https://squadplayers.com/demo/">
   <meta property="og:title" content="SQUAD — Демо приложения">
-  <meta property="og:description" content="Живая сборка iOS 1.0.7 из TestFlight: 1 минута 38 секунд.">
+  <meta property="og:description" content="Демонстрационное видео SQUAD: живая сборка iOS 1.0.7 из TestFlight — главная, поиск игры, создание матча с оплатой своей части, профиль и рейтинг.">
   <meta property="og:type" content="video.other">
   <meta property="og:url" content="https://squadplayers.com/demo/">
   <meta property="og:image" content="https://squadplayers.com/assets/og.png">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://squadplayers.com/ru/demo/">
+  <link rel="alternate" hreflang="uz" href="https://squadplayers.com/uz/demo/">
+  <link rel="alternate" hreflang="en" href="https://squadplayers.com/en/demo/">
+  <link rel="alternate" hreflang="x-default" href="https://squadplayers.com/demo/">
   <link rel="stylesheet" href="/assets/styles.css?v=20261011">
   <style>
     .demo-hero { padding: calc(110px + env(safe-area-inset-top)) 0 48px; }
@@ -36,7 +40,6 @@
     .proto-card p { margin: 0; color: var(--muted); font-size: 15px; }
     .proto-card em { margin-top: auto; padding-top: 8px; color: var(--lime); font-style: normal; font-weight: 800; }
     a.proto-card:hover { border-color: var(--lime); }
-    .en-summary p { max-width: 760px; color: var(--muted); }
     @media (min-width: 640px) { .proto-grid { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 960px) {
       .demo-grid { grid-template-columns: 380px 1fr; gap: 64px; }
@@ -53,12 +56,13 @@
         <a href="/ru/index.html#how">Как это работает</a>
         <a href="/ru/index.html#plan">План реализации</a>
         <a href="/ru/index.html#team">Команда</a>
-        <a href="/demo/" aria-current="page">Демо</a>
+        <a href="/ru/demo/" aria-current="page">Демо</a>
         <a href="/ru/index.html#contact">Контакты</a>
       </nav>
       <div class="lang-switcher" aria-label="Language">
-        <a href="/demo/" aria-current="page">RU</a>
-        <a href="#en">EN</a>
+        <a href="/ru/demo/" aria-current="page">RU</a>
+        <a href="/uz/demo/">UZ</a>
+        <a href="/en/demo/">EN</a>
       </div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span></button>
     </div>
@@ -71,7 +75,7 @@
           <figure class="demo-video">
             <video id="demo" controls playsinline preload="metadata" poster="/assets/img/demo-poster.jpg" width="576" height="1280">
               <source src="/assets/video/squad-demo.mp4" type="video/mp4">
-              Ваш браузер не поддерживает видео. <a href="/assets/video/squad-demo.mp4">Скачать ролик (MP4)</a>.
+              Ваш браузер не поддерживает видео. <a href="/assets/video/squad-demo.mp4">Скачать ролик (MP4)</a>
             </video>
           </figure>
           <p class="demo-meta">1:38 · запись экрана iPhone · iOS 1.0.7 из TestFlight</p>
@@ -118,14 +122,6 @@
             <em>squadplayers.com →</em>
           </a>
         </div>
-      </div>
-    </section>
-
-    <section class="section en-summary" id="en">
-      <div class="wrap">
-        <p class="eyebrow">English</p>
-        <h2 class="display h2">Demo in<br><span class="accent">brief</span></h2>
-        <p>A 1:38 screen recording of a real iPhone running SQUAD iOS 1.0.7 from TestFlight, connected to the production backend. It shows the home screen with the player’s level, finding a game, creating a match (club, date, court slot, format, level range and visibility), the “everyone pays for their own spot” checkout with the SQUAD service fee, the player profile with calibration, the Tashkent city rating and in-app chats. Before the public launch the database contains only a test club and courts labelled “[REVIEW / TEST]”; no match is created and no payment is made in the video. TestFlight access for the jury: ceo@squadplayers.com.</p>
       </div>
     </section>
   </main>

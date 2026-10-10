@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="{{lang}}" data-lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17171a">
+  <title>{{title}}</title>
+  <meta name="description" content="{{desc}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{desc}}">
+  <meta property="og:type" content="video.other">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="https://squadplayers.com/assets/og.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://squadplayers.com/ru/demo/">
+  <link rel="alternate" hreflang="uz" href="https://squadplayers.com/uz/demo/">
+  <link rel="alternate" hreflang="en" href="https://squadplayers.com/en/demo/">
+  <link rel="alternate" hreflang="x-default" href="https://squadplayers.com/demo/">
+  <link rel="stylesheet" href="/assets/styles.css?v={{version}}">
+  <style>
+    .demo-hero { padding: calc(110px + env(safe-area-inset-top)) 0 48px; }
+    .demo-grid { display: grid; gap: 36px; align-items: start; }
+    .demo-video { width: min(340px, 100%); margin: 0 auto; padding: 10px; border: 1px solid var(--line); border-radius: 44px; background: #0d0d0f; box-shadow: 0 30px 80px rgba(0, 0, 0, .45); }
+    .demo-video video { display: block; width: 100%; height: auto; aspect-ratio: 576 / 1280; border-radius: 34px; background: #000; }
+    .demo-meta { margin: 14px 0 0; color: var(--muted); font-size: 13px; font-weight: 700; text-align: center; }
+    .chapters { display: grid; gap: 0; margin: 24px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .chapters li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .chapters button { align-self: start; padding: 6px 0; border: 0; border-radius: 10px; color: var(--ink); background: var(--lime); font: italic 900 14px/1 var(--font-display); cursor: pointer; }
+    .chapters b { display: block; color: var(--text); font: italic 900 18px/1.1 var(--font-display); text-transform: uppercase; }
+    .chapters span { display: block; margin-top: 4px; color: var(--muted); font-size: 15px; }
+    .demo-note { margin: 22px 0 0; padding: 16px 18px; border: 1px solid var(--line-soft); border-radius: 16px; background: var(--surface-soft); color: var(--muted); font-size: 14px; }
+    .demo-note b { color: var(--text); }
+    .proto-grid { display: grid; gap: 10px; }
+    .proto-card { display: flex; flex-direction: column; gap: 8px; padding: 22px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface-soft); color: var(--text); text-decoration: none; }
+    .proto-card small { color: var(--lime); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .proto-card h3 { margin: 0; font: italic 900 22px/1.05 var(--font-display); text-transform: uppercase; }
+    .proto-card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .proto-card em { margin-top: auto; padding-top: 8px; color: var(--lime); font-style: normal; font-weight: 800; }
+    a.proto-card:hover { border-color: var(--lime); }
+    @media (min-width: 640px) { .proto-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) {
+      .demo-grid { grid-template-columns: 380px 1fr; gap: 64px; }
+      .demo-video { position: sticky; top: 96px; }
+      .proto-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body data-page="demo">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/{{lang}}/index.html" aria-label="SQUAD">SQUAD<span>.</span></a>
+      <nav class="main-nav" aria-label="{{navLabel}}">
+        <a href="/{{lang}}/index.html#how">{{navHow}}</a>
+        <a href="/{{lang}}/index.html#plan">{{navPlan}}</a>
+        <a href="/{{lang}}/index.html#team">{{navTeam}}</a>
+        <a href="/{{lang}}/demo/" aria-current="page">{{navDemo}}</a>
+        <a href="/{{lang}}/index.html#contact">{{navContacts}}</a>
+      </nav>
+      <div class="lang-switcher" aria-label="Language">
+        <a href="/ru/demo/"{{curRu}}>RU</a>
+        <a href="/uz/demo/"{{curUz}}>UZ</a>
+        <a href="/en/demo/"{{curEn}}>EN</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="{{menuLabel}}"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section demo-hero">
+      <div class="wrap demo-grid">
+        <div>
+          <figure class="demo-video">
+            <video id="demo" controls playsinline preload="metadata" poster="/assets/img/demo-poster.jpg" width="576" height="1280">
+              <source src="/assets/video/squad-demo.mp4" type="video/mp4">
+              {{fallback}} <a href="/assets/video/squad-demo.mp4">{{download}}</a>
+            </video>
+          </figure>
+          <p class="demo-meta">{{meta}}</p>
+        </div>
+
+        <div>
+          <p class="status-pill"><i aria-hidden="true"></i>{{pill}}</p>
+          <h1 class="display h2">{{h1}}</h1>
+          <p class="lead">{{lead}}</p>
+
+          <ol class="chapters" aria-label="{{chaptersLabel}}">
+            <li><button type="button" data-t="0">0:00</button><div><b>{{c1}}</b><span>{{c1p}}</span></div></li>
+            <li><button type="button" data-t="12">0:12</button><div><b>{{c2}}</b><span>{{c2p}}</span></div></li>
+            <li><button type="button" data-t="31">0:31</button><div><b>{{c3}}</b><span>{{c3p}}</span></div></li>
+            <li><button type="button" data-t="41">0:41</button><div><b>{{c4}}</b><span>{{c4p}}</span></div></li>
+            <li><button type="button" data-t="51">0:51</button><div><b>{{c5}}</b><span>{{c5p}}</span></div></li>
+            <li><button type="button" data-t="70">1:10</button><div><b>{{c6}}</b><span>{{c6p}}</span></div></li>
+            <li><button type="button" data-t="80">1:20</button><div><b>{{c7}}</b><span>{{c7p}}</span></div></li>
+            <li><button type="button" data-t="95">1:35</button><div><b>{{c8}}</b><span>{{c8p}}</span></div></li>
+          </ol>
+
+          <p class="demo-note"><b>{{noteB}}</b> {{note}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--deep">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">{{protoEyebrow}}</p>
+          <h2 class="display h2">{{protoTitle}}</h2>
+        </div>
+        <div class="proto-grid">
+          <a class="proto-card" data-reveal href="mailto:ceo@squadplayers.com?subject=SQUAD%20TestFlight%20%E2%80%94%20Pitch%20Day%203.0">
+            <small>iOS · TestFlight</small>
+            <h3>{{p1}}</h3>
+            <p>{{p1p}}</p>
+            <em>ceo@squadplayers.com →</em>
+          </a>
+          <a class="proto-card" data-reveal href="/{{lang}}/index.html">
+            <small>{{p2k}}</small>
+            <h3>{{p2}}</h3>
+            <p>{{p2p}}</p>
+            <em>squadplayers.com →</em>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom"><span>© 2026 SQUAD, MCHJ · {{tin}} 313301535</span><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div>
+    </div>
+  </footer>
+  <script src="/assets/app.js?v={{version}}" defer></script>
+  <script>
+    document.querySelectorAll('.chapters button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = document.getElementById('demo');
+        v.currentTime = Number(b.dataset.t);
+        v.play();
+        if (window.innerWidth < 960) v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  </script>
+</body>
+</html>

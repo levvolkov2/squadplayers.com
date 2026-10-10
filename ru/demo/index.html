@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru" data-lang="ru">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17171a">
+  <title>SQUAD — Демо приложения</title>
+  <meta name="description" content="Демонстрационное видео SQUAD: живая сборка iOS 1.0.7 из TestFlight — главная, поиск игры, создание матча с оплатой своей части, профиль и рейтинг.">
+  <link rel="canonical" href="https://squadplayers.com/ru/demo/">
+  <meta property="og:title" content="SQUAD — Демо приложения">
+  <meta property="og:description" content="Демонстрационное видео SQUAD: живая сборка iOS 1.0.7 из TestFlight — главная, поиск игры, создание матча с оплатой своей части, профиль и рейтинг.">
+  <meta property="og:type" content="video.other">
+  <meta property="og:url" content="https://squadplayers.com/ru/demo/">
+  <meta property="og:image" content="https://squadplayers.com/assets/og.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://squadplayers.com/ru/demo/">
+  <link rel="alternate" hreflang="uz" href="https://squadplayers.com/uz/demo/">
+  <link rel="alternate" hreflang="en" href="https://squadplayers.com/en/demo/">
+  <link rel="alternate" hreflang="x-default" href="https://squadplayers.com/demo/">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261011">
+  <style>
+    .demo-hero { padding: calc(110px + env(safe-area-inset-top)) 0 48px; }
+    .demo-grid { display: grid; gap: 36px; align-items: start; }
+    .demo-video { width: min(340px, 100%); margin: 0 auto; padding: 10px; border: 1px solid var(--line); border-radius: 44px; background: #0d0d0f; box-shadow: 0 30px 80px rgba(0, 0, 0, .45); }
+    .demo-video video { display: block; width: 100%; height: auto; aspect-ratio: 576 / 1280; border-radius: 34px; background: #000; }
+    .demo-meta { margin: 14px 0 0; color: var(--muted); font-size: 13px; font-weight: 700; text-align: center; }
+    .chapters { display: grid; gap: 0; margin: 24px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .chapters li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .chapters button { align-self: start; padding: 6px 0; border: 0; border-radius: 10px; color: var(--ink); background: var(--lime); font: italic 900 14px/1 var(--font-display); cursor: pointer; }
+    .chapters b { display: block; color: var(--text); font: italic 900 18px/1.1 var(--font-display); text-transform: uppercase; }
+    .chapters span { display: block; margin-top: 4px; color: var(--muted); font-size: 15px; }
+    .demo-note { margin: 22px 0 0; padding: 16px 18px; border: 1px solid var(--line-soft); border-radius: 16px; background: var(--surface-soft); color: var(--muted); font-size: 14px; }
+    .demo-note b { color: var(--text); }
+    .proto-grid { display: grid; gap: 10px; }
+    .proto-card { display: flex; flex-direction: column; gap: 8px; padding: 22px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface-soft); color: var(--text); text-decoration: none; }
+    .proto-card small { color: var(--lime); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .proto-card h3 { margin: 0; font: italic 900 22px/1.05 var(--font-display); text-transform: uppercase; }
+    .proto-card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .proto-card em { margin-top: auto; padding-top: 8px; color: var(--lime); font-style: normal; font-weight: 800; }
+    a.proto-card:hover { border-color: var(--lime); }
+    @media (min-width: 640px) { .proto-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) {
+      .demo-grid { grid-template-columns: 380px 1fr; gap: 64px; }
+      .demo-video { position: sticky; top: 96px; }
+      .proto-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body data-page="demo">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/ru/index.html" aria-label="SQUAD">SQUAD<span>.</span></a>
+      <nav class="main-nav" aria-label="Меню">
+        <a href="/ru/index.html#how">Как это работает</a>
+        <a href="/ru/index.html#plan">План реализации</a>
+        <a href="/ru/index.html#team">Команда</a>
+        <a href="/ru/demo/" aria-current="page">Демо</a>
+        <a href="/ru/index.html#contact">Контакты</a>
+      </nav>
+      <div class="lang-switcher" aria-label="Language">
+        <a href="/ru/demo/" aria-current="page">RU</a>
+        <a href="/uz/demo/">UZ</a>
+        <a href="/en/demo/">EN</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section demo-hero">
+      <div class="wrap demo-grid">
+        <div>
+          <figure class="demo-video">
+            <video id="demo" controls playsinline preload="metadata" poster="/assets/img/demo-poster.jpg" width="576" height="1280">
+              <source src="/assets/video/squad-demo.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео. <a href="/assets/video/squad-demo.mp4">Скачать ролик (MP4)</a>
+            </video>
+          </figure>
+          <p class="demo-meta">1:38 · запись экрана iPhone · iOS 1.0.7 из TestFlight</p>
+        </div>
+
+        <div>
+          <p class="status-pill"><i aria-hidden="true"></i>Демо · живая сборка 1.0.7</p>
+          <h1 class="display h2">SQUAD<br><span class="accent">в работе</span></h1>
+          <p class="lead">Запись экрана реального iPhone: тестовая сборка из TestFlight подключена к рабочему серверу SQUAD. Показываем путь игрока — от главной до матча, где каждый платит только свою часть.</p>
+
+          <ol class="chapters" aria-label="Что показано в видео">
+            <li><button type="button" data-t="0">0:00</button><div><b>Главная</b><span>«Во что играем сегодня?»: уровень игрока ~2.5, выбор вида спорта, ближайшие игры, свободные корты и турниры.</span></div></li>
+            <li><button type="button" data-t="12">0:12</button><div><b>Играть</b><span>Матчи, корты и турниры с фильтрами: мой уровень, дата, вечер, район.</span></div></li>
+            <li><button type="button" data-t="31">0:31</button><div><b>Новый матч</b><span>Клуб, дата и свободное время на корте с ценой с человека.</span></div></li>
+            <li><button type="button" data-t="41">0:41</button><div><b>Формат и уровень</b><span>Парный 2×2, калибровочный или рейтинговый матч, диапазон уровня, открытый или закрытый матч.</span></div></li>
+            <li><button type="button" data-t="51">0:51</button><div><b>Оплата своей части</b><span>«Каждый платит за своё место»: итог со стоимостью корта и сервисным сбором SQUAD — до оплаты картой.</span></div></li>
+            <li><button type="button" data-t="70">1:10</button><div><b>Профиль</b><span>Уровень профиля, калибровка 0 из 5, статистика матчей, лента и игроки.</span></div></li>
+            <li><button type="button" data-t="80">1:20</button><div><b>Рейтинг города</b><span>Рейтинг Ташкента — по подтверждённым результатам после пяти калибровочных матчей.</span></div></li>
+            <li><button type="button" data-t="95">1:35</button><div><b>Чаты</b><span>Чаты матчей и поддержка SQUAD прямо в приложении.</span></div></li>
+          </ol>
+
+          <p class="demo-note"><b>Важно.</b> До публичного запуска в базе только тестовые клуб и корты — они подписаны «[REVIEW / TEST]». В видео матч не создаётся и оплата не проводится. Реальные клубы, начиная с Itek Tennis Club, появятся к запуску в четвёртом квартале 2026 года.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--deep">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Прототип</p>
+          <h2 class="display h2">Попробовать<br>самому</h2>
+        </div>
+        <div class="proto-grid">
+          <a class="proto-card" data-reveal href="mailto:ceo@squadplayers.com?subject=SQUAD%20TestFlight%20%E2%80%94%20Pitch%20Day%203.0">
+            <small>iOS · TestFlight</small>
+            <h3>Работающий прототип</h3>
+            <p>Сборка iOS 1.0.7 в TestFlight. Напишите — пришлём приглашение для установки на iPhone в тот же день.</p>
+            <em>ceo@squadplayers.com →</em>
+          </a>
+          <a class="proto-card" data-reveal href="/ru/index.html">
+            <small>Сайт</small>
+            <h3>Проблема, решение, команда</h3>
+            <p>Как работает SQUAD, дорожная карта, план реализации с решениями на базе ИИ и команда.</p>
+            <em>squadplayers.com →</em>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom"><span>© 2026 SQUAD, MCHJ · ИНН 313301535</span><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div>
+    </div>
+  </footer>
+  <script src="/assets/app.js?v=20261011" defer></script>
+  <script>
+    document.querySelectorAll('.chapters button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = document.getElementById('demo');
+        v.currentTime = Number(b.dataset.t);
+        v.play();
+        if (window.innerWidth < 960) v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  </script>
+</body>
+</html>

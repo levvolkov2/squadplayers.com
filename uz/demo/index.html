@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="uz" data-lang="uz">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17171a">
+  <title>SQUAD — Ilova demosi</title>
+  <meta name="description" content="SQUAD demo videosi: TestFlightdagi iOS 1.0.7 jonli versiyasi — bosh sahifa, o‘yin qidirish, har kim o‘z ulushini to‘laydigan o‘yin yaratish, profil va reyting.">
+  <link rel="canonical" href="https://squadplayers.com/uz/demo/">
+  <meta property="og:title" content="SQUAD — Ilova demosi">
+  <meta property="og:description" content="SQUAD demo videosi: TestFlightdagi iOS 1.0.7 jonli versiyasi — bosh sahifa, o‘yin qidirish, har kim o‘z ulushini to‘laydigan o‘yin yaratish, profil va reyting.">
+  <meta property="og:type" content="video.other">
+  <meta property="og:url" content="https://squadplayers.com/uz/demo/">
+  <meta property="og:image" content="https://squadplayers.com/assets/og.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://squadplayers.com/ru/demo/">
+  <link rel="alternate" hreflang="uz" href="https://squadplayers.com/uz/demo/">
+  <link rel="alternate" hreflang="en" href="https://squadplayers.com/en/demo/">
+  <link rel="alternate" hreflang="x-default" href="https://squadplayers.com/demo/">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261011">
+  <style>
+    .demo-hero { padding: calc(110px + env(safe-area-inset-top)) 0 48px; }
+    .demo-grid { display: grid; gap: 36px; align-items: start; }
+    .demo-video { width: min(340px, 100%); margin: 0 auto; padding: 10px; border: 1px solid var(--line); border-radius: 44px; background: #0d0d0f; box-shadow: 0 30px 80px rgba(0, 0, 0, .45); }
+    .demo-video video { display: block; width: 100%; height: auto; aspect-ratio: 576 / 1280; border-radius: 34px; background: #000; }
+    .demo-meta { margin: 14px 0 0; color: var(--muted); font-size: 13px; font-weight: 700; text-align: center; }
+    .chapters { display: grid; gap: 0; margin: 24px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .chapters li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .chapters button { align-self: start; padding: 6px 0; border: 0; border-radius: 10px; color: var(--ink); background: var(--lime); font: italic 900 14px/1 var(--font-display); cursor: pointer; }
+    .chapters b { display: block; color: var(--text); font: italic 900 18px/1.1 var(--font-display); text-transform: uppercase; }
+    .chapters span { display: block; margin-top: 4px; color: var(--muted); font-size: 15px; }
+    .demo-note { margin: 22px 0 0; padding: 16px 18px; border: 1px solid var(--line-soft); border-radius: 16px; background: var(--surface-soft); color: var(--muted); font-size: 14px; }
+    .demo-note b { color: var(--text); }
+    .proto-grid { display: grid; gap: 10px; }
+    .proto-card { display: flex; flex-direction: column; gap: 8px; padding: 22px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface-soft); color: var(--text); text-decoration: none; }
+    .proto-card small { color: var(--lime); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .proto-card h3 { margin: 0; font: italic 900 22px/1.05 var(--font-display); text-transform: uppercase; }
+    .proto-card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .proto-card em { margin-top: auto; padding-top: 8px; color: var(--lime); font-style: normal; font-weight: 800; }
+    a.proto-card:hover { border-color: var(--lime); }
+    @media (min-width: 640px) { .proto-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) {
+      .demo-grid { grid-template-columns: 380px 1fr; gap: 64px; }
+      .demo-video { position: sticky; top: 96px; }
+      .proto-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body data-page="demo">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/uz/index.html" aria-label="SQUAD">SQUAD<span>.</span></a>
+      <nav class="main-nav" aria-label="Menyu">
+        <a href="/uz/index.html#how">Qanday ishlaydi</a>
+        <a href="/uz/index.html#plan">Amalga oshirish rejasi</a>
+        <a href="/uz/index.html#team">Jamoa</a>
+        <a href="/uz/demo/" aria-current="page">Demo</a>
+        <a href="/uz/index.html#contact">Aloqa</a>
+      </nav>
+      <div class="lang-switcher" aria-label="Language">
+        <a href="/ru/demo/">RU</a>
+        <a href="/uz/demo/" aria-current="page">UZ</a>
+        <a href="/en/demo/">EN</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menyuni ochish"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section demo-hero">
+      <div class="wrap demo-grid">
+        <div>
+          <figure class="demo-video">
+            <video id="demo" controls playsinline preload="metadata" poster="/assets/img/demo-poster.jpg" width="576" height="1280">
+              <source src="/assets/video/squad-demo.mp4" type="video/mp4">
+              Brauzeringiz videoni qo‘llab-quvvatlamaydi. <a href="/assets/video/squad-demo.mp4">Videoni yuklab olish (MP4)</a>
+            </video>
+          </figure>
+          <p class="demo-meta">1:38 · iPhone ekran yozuvi · TestFlightdagi iOS 1.0.7</p>
+        </div>
+
+        <div>
+          <p class="status-pill"><i aria-hidden="true"></i>Demo · jonli versiya 1.0.7</p>
+          <h1 class="display h2">SQUAD<br><span class="accent">amalda</span></h1>
+          <p class="lead">Haqiqiy iPhone ekran yozuvi: TestFlight versiyasi SQUADning ishchi serveriga ulangan. O‘yinchining yo‘lini ko‘rsatamiz — bosh sahifadan har kim faqat o‘z ulushini to‘laydigan o‘yingacha.</p>
+
+          <ol class="chapters" aria-label="Videoda nimalar ko‘rsatilgan">
+            <li><button type="button" data-t="0">0:00</button><div><b>Bosh sahifa</b><span>«Bugun nima o‘ynaymiz?»: o‘yinchi darajasi ~2.5, sport turini tanlash, yaqin o‘yinlar, bo‘sh kortlar va turnirlar.</span></div></li>
+            <li><button type="button" data-t="12">0:12</button><div><b>O‘ynash</b><span>O‘yinlar, kortlar va turnirlar filtrlar bilan: mening darajam, sana, kechqurun, tuman.</span></div></li>
+            <li><button type="button" data-t="31">0:31</button><div><b>Yangi o‘yin</b><span>Klub, sana va kortdagi bo‘sh vaqt — bir kishi uchun narx bilan.</span></div></li>
+            <li><button type="button" data-t="41">0:41</button><div><b>Format va daraja</b><span>Juftlik 2×2, kalibrovka yoki reyting o‘yini, daraja oralig‘i, ochiq yoki yopiq o‘yin.</span></div></li>
+            <li><button type="button" data-t="51">0:51</button><div><b>O‘z ulushini to‘lash</b><span>«Har kim o‘z joyi uchun to‘laydi»: kort narxi va SQUAD xizmat haqi bilan jami summa — karta orqali to‘lovdan oldin.</span></div></li>
+            <li><button type="button" data-t="70">1:10</button><div><b>Profil</b><span>Profil darajasi, kalibrovka 5 tadan 0, o‘yinlar statistikasi, lenta va o‘yinchilar.</span></div></li>
+            <li><button type="button" data-t="80">1:20</button><div><b>Shahar reytingi</b><span>Toshkent reytingi — besh kalibrovka o‘yinidan keyingi tasdiqlangan natijalar asosida.</span></div></li>
+            <li><button type="button" data-t="95">1:35</button><div><b>Chatlar</b><span>O‘yin chatlari va SQUAD qo‘llab-quvvatlash xizmati to‘g‘ridan-to‘g‘ri ilovada.</span></div></li>
+          </ol>
+
+          <p class="demo-note"><b>Muhim.</b> Ommaviy ishga tushirishgacha bazada faqat «[REVIEW / TEST]» belgili test klubi va kortlari bor. Videoda o‘yin yaratilmaydi va to‘lov amalga oshirilmaydi. Haqiqiy klublar, Itek Tennis Clubdan boshlab, 2026-yilning to‘rtinchi choragidagi ishga tushirishgacha paydo bo‘ladi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--deep">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Prototip</p>
+          <h2 class="display h2">O‘zingiz<br>sinab ko‘ring</h2>
+        </div>
+        <div class="proto-grid">
+          <a class="proto-card" data-reveal href="mailto:ceo@squadplayers.com?subject=SQUAD%20TestFlight%20%E2%80%94%20Pitch%20Day%203.0">
+            <small>iOS · TestFlight</small>
+            <h3>Ishlaydigan prototip</h3>
+            <p>TestFlightdagi iOS 1.0.7 versiyasi. Yozing — iPhone’ga o‘rnatish uchun taklifnomani o‘sha kuni yuboramiz.</p>
+            <em>ceo@squadplayers.com →</em>
+          </a>
+          <a class="proto-card" data-reveal href="/uz/index.html">
+            <small>Sayt</small>
+            <h3>Muammo, yechim, jamoa</h3>
+            <p>SQUAD qanday ishlaydi, yo‘l xaritasi, sun’iy intellekt yechimlari bilan amalga oshirish rejasi va jamoa.</p>
+            <em>squadplayers.com →</em>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom"><span>© 2026 SQUAD, MCHJ · STIR 313301535</span><a href="mailto:support@squadplayers.com">support@squadplayers.com</a></div>
+    </div>
+  </footer>
+  <script src="/assets/app.js?v=20261011" defer></script>
+  <script>
+    document.querySelectorAll('.chapters button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = document.getElementById('demo');
+        v.currentTime = Number(b.dataset.t);
+        v.play();
+        if (window.innerWidth < 960) v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  </script>
+</body>
+</html>
