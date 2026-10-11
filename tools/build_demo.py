@@ -97,6 +97,14 @@ EN = dict(
 )
 
 
+NBSP_NUM = re.compile(r'(?<=\d) (?=\d{3}(?!\d))')
+
+
+def keep_numbers(page):
+    """Non-breaking spaces inside numbers like 500 000 (text nodes only)."""
+    return re.sub(r'>([^<]+)<', lambda m: '>' + NBSP_NUM.sub(' ', m.group(1)) + '<', page)
+
+
 def render(template, lang, data, canonical):
     values = {k: (v if k in RAW else html.escape(v, quote=True)) for k, v in data.items()}
     values.update(lang=lang, version=VERSION, canonical=canonical,
@@ -109,7 +117,7 @@ def render(template, lang, data, canonical):
         if key not in values:
             raise KeyError(f'{lang}: missing key {key}')
         return values[key]
-    return re.sub(r'\{\{(\w+)\}\}', sub, template)
+    return keep_numbers(re.sub(r'\{\{(\w+)\}\}', sub, template))
 
 
 def main():

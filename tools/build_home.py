@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = '20261010'
+VERSION = '20261011'
 
 # Keys whose values contain intentional markup (not escaped).
 RAW = {'heroTitle', 'problemTitle', 'solutionTitle', 'priceTitle', 'productTitle', 'coachTitle',
@@ -189,7 +189,7 @@ UZ = dict(
     f4='Murabbiy bir necha bosishda', f4p='Profil, jadval, yozilish va mashg‘ulot uchun to‘lov.',
     screensEyebrow='1.0.7 versiyaning haqiqiy ekranlari', screensHint='Suring →',
     capWelcome='Start', capHome='Bosh sahifa', capLevels='Darajalar', capProfile='Profil', capCoach='Murabbiy kabineti',
-    priceEyebrow='Hamyonbop', priceTitle='Padel 500 000 emas,<br>125 000 so‘m',
+    priceEyebrow='Hamyonbop', priceTitle='Padel —<br>125 000 so‘m,<br>500 000 emas',
     priceLead='Kechki 90 daqiqalik padel 500 000 so‘m turadi. SQUADda har kim o‘z ulushini to‘laydi — elita sporti hamyonbop bo‘ladi.',
     priceTotal='kechki 90 daqiqalik kort · Padel.uz', pricePart='o‘z ulushi',
     priceNote1a='Qarzsiz —', priceNote1b='har kim o‘zi, darhol ilovada to‘laydi',
@@ -453,6 +453,14 @@ EN = dict(
 )
 
 
+NBSP_NUM = re.compile(r'(?<=\d) (?=\d{3}(?!\d))')
+
+
+def keep_numbers(page):
+    """Non-breaking spaces inside numbers like 500 000 (text nodes only)."""
+    return re.sub(r'>([^<]+)<', lambda m: '>' + NBSP_NUM.sub(' ', m.group(1)) + '<', page)
+
+
 def render(template, lang, data, canonical):
     values = {k: (v if k in RAW else html.escape(v, quote=True)) for k, v in data.items()}
     values.update(lang=lang, version=VERSION, canonical=canonical,
@@ -466,7 +474,7 @@ def render(template, lang, data, canonical):
         if key not in values:
             raise KeyError(f'{lang}: missing key {key}')
         return values[key]
-    return re.sub(r'\{\{(\w+)\}\}', sub, template)
+    return keep_numbers(re.sub(r'\{\{(\w+)\}\}', sub, template))
 
 
 def main():

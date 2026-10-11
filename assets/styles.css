@@ -98,7 +98,7 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 
 /* Ticker — the track moves inside a clipped box, so it never widens the page */
 .ticker { overflow: hidden; border-block: 1px solid var(--ink); background: var(--lime); color: var(--ink); contain: paint; }
-.ticker-track { display: flex; width: max-content; animation: ticker 28s linear infinite; }
+.ticker-track { display: flex; width: max-content; animation: ticker var(--ticker-time, 36s) linear infinite; will-change: transform; backface-visibility: hidden; }
 .ticker span { padding: 14px 0; font: italic 900 18px/1 var(--font-display); letter-spacing: .02em; text-transform: uppercase; white-space: pre; }
 
 /* Problem */
@@ -316,7 +316,7 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 html.js [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 html.js [data-reveal].is-visible { opacity: 1; transform: none; }
 
-@keyframes ticker { to { transform: translateX(-50%); } }
+@keyframes ticker { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 @keyframes pulse { 50% { opacity: .35; } }
 
 @media (min-width: 640px) {
@@ -397,4 +397,12 @@ html.js [data-reveal].is-visible { opacity: 1; transform: none; }
   .road.road--stages { grid-template-columns: repeat(4, 1fr); }
   .plan-stages { grid-template-columns: repeat(3, 1fr); }
   .plan-cols { grid-template-columns: 5fr 7fr; align-items: start; }
+}
+
+/* Hero title: never split a word (e.g. "QAYERDA?"), size it to the column */
+.hero-copy { container-type: inline-size; }
+.hero-title { overflow-wrap: normal; word-break: keep-all; hyphens: none; }
+@supports (font-size: 1cqi) {
+  .hero-title { font-size: min(148px, 23cqi); }
+  html[lang="uz"] .hero-title { font-size: min(140px, 17.5cqi); }
 }
