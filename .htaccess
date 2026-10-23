@@ -9,6 +9,10 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://squadplayers.com%{REQUEST_URI} [L,R=301]
 
+# Player invitation routes (preserve the visible URL)
+RewriteRule ^share/(match/[1-9][0-9]{0,18}/?|invite/?)$ share/index.html [L]
+RewriteRule ^download/?$ download/index.html [L]
+
 # Служебные файлы не отдаём
 RewriteRule (^|/)(README\.md|\.DS_Store)$ - [F,L]
 
@@ -25,4 +29,27 @@ RewriteRule (^|/)(README\.md|\.DS_Store)$ - [F,L]
   ExpiresByType image/svg+xml "access plus 1 month"
   ExpiresByType image/jpeg "access plus 1 month"
   ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Public share content contains invitation capabilities; never send referrers.
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "^/(share|download)(/|$)" squad_share=1
+</IfModule>
+<IfModule mod_headers.c>
+  Header always set Referrer-Policy "no-referrer" env=squad_share
+  <FilesMatch "^(landing\.mjs|redirect\.mjs|links\.js|presentation\.js|config\.js|share\.css)$">
+    Header always set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+<Files "apple-app-site-association">
+  ForceType application/json
+</Files>
+
+<IfModule mod_mime.c>
+  AddType application/javascript .mjs
+</IfModule>
+<IfModule mod_headers.c>
+  <Files "marketplace-format.js">
+    Header always set Cache-Control "no-cache"
+  </Files>
 </IfModule>

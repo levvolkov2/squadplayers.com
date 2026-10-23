@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "Z8723KSYQJ.com.squad.iossquad",
+        "paths": [
+          "/share/match/*",
+          "/share/invite",
+          "/share/invite/"
+        ]
+      }
+    ]
+  }
+}
